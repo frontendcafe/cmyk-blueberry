@@ -1,4 +1,6 @@
-.Button {
-    background-color: pink;
-    color: white;
+@use 'src/styles/utils' as *;
+
+.button {
+  color: $color-bg;
+  background: $color-primary;
 }
