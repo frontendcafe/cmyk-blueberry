@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+.card {
+    position: absolute;
+    width: 455px;
+    height: 644px;
+    left: 30px;
+    bottom: 30px;
+    top: 20px;
+
+    .transparent-card {
+        /* primario */
+        border: 3px solid #4F84F9;
+        box-sizing: border-box;
+    
+        /* Shadow 2 */
+        filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+    }
+    .color-card {
+        /* primario */
+        background: #4F84F9;
+    
+        /* primario */
+        border: 3px solid #4F84F9;
+        box-sizing: border-box;
+    
+        /* Shadow 2 */
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
+    
+}
+
+.rectangle {
+    
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+
+}
+
+
+
+
+.div-vector
+{
+    position: absolute;
+    left: 42.95%;
+    right: 42.81%;
+    top: 41.58%;
+    bottom: 48.19%;
+}
+
+.vector
+{
+    width: 50%;
+    position: absolute;
+    left: 20.83%;
+    right: 20.83%;
+    top: 4.17%;
+    bottom: 4.17%;
+
+}
+
+.title-div {
+    position: absolute;
+    left: 19.16%;
+    right: 19.16%;
+    top: 53.03%;
+    bottom: 33.68%;
+
+    .transparent {
+        color: #4F84F9;
+    }
+    .color {
+        color: #EFECE5;
+    }
+}
+
+/* H3 */
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 150%;
+    
+    /* or 42px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+
+
+
+}
+
+
+
+
+.body-div {
+    position: absolute;
+    left: 3.08%;
+    right: 3.08%;
+    top: 70.59%;
+    bottom: 10.63%;
+
+    .transparent
+    {
+    /* secundario */
+    color: #2A5678;
+    }
+
+    .color {
+        color: #EFECE5;
+    }
+}
+
+/* Parrafo */
+p {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    
+    /* or 30px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+
+    
+}
+
+
