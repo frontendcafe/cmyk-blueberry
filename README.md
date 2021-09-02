@@ -16,9 +16,7 @@ Luego sobre dicha rama se harán los commits y el push para luego crear el Pull 
 ### Nomenclatura para las ramas
 Les recomendamos utilizar las siguientes nomenclaturas que son muy comunes:
 
-feature/componente
-bug/nombre-bug
-fix/nombre-fix
+issue-9/feature
 
 ## Estructura de archivos
 
