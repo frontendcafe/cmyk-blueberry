@@ -1,33 +1,48 @@
+@use 'src/styles/utils' as *;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
 
 .card {
-    position: absolute;
-    width: 455px;
-    height: 644px;
-    left: 30px;
-    bottom: 30px;
-    top: 20px;
+
+   
+        
+        position: absolute;
+        width: 295px;
+        height: 321px;
+        left: 15px;
+        top: 50px;
+
+        
+    
+    @include media(md)
+    {
+        position: absolute;
+        width: 455px;
+        height: 644px;
+        left: 30px;
+        top: 20px;
+    }
+
 
     .transparent-card {
         /* primario */
-        border: 3px solid #4F84F9;
+        border: 3px solid $color-primary;
         box-sizing: border-box;
     
         /* Shadow 2 */
-        filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.25));
-        border-radius: 10px;
+        filter: drop-shadow($shadow-lg);
+        border-radius: $rounded;
     }
     .color-card {
         /* primario */
-        background: #4F84F9;
+        background: $color-primary;
     
         /* primario */
         border: 3px solid #4F84F9;
         box-sizing: border-box;
     
         /* Shadow 2 */
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
+        box-shadow: $shadow-lg;
+        border-radius: $rounded;
     }
     
 }
@@ -48,11 +63,24 @@
 
 .div-vector
 {
+
+        position: absolute;
+        left: 46.1%;
+        right: 45.76%;
+        top: 31.78%;
+        bottom: 60.75%;
+
+
+    @include media(md)
+    {
     position: absolute;
     left: 42.95%;
     right: 42.81%;
     top: 41.58%;
     bottom: 48.19%;
+ 
+    }
+    
 }
 
 .vector
@@ -67,28 +95,45 @@
 }
 
 .title-div {
+
+  
+        position: absolute;
+        left: 17.97%;
+        right: 17.63%;
+        top: 40.19%;
+        bottom: 44.55%;
+    
+    @include media(md)
+    {
     position: absolute;
     left: 19.16%;
     right: 19.16%;
     top: 53.03%;
     bottom: 33.68%;
+    }
+ 
 
     .transparent {
-        color: #4F84F9;
+        color: $color-primary;
     }
     .color {
-        color: #EFECE5;
+        color: $color-bg;
     }
 }
 
 /* H3 */
 h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: $raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
     line-height: 150%;
-    
+   
+    font-size: $base-size!important;
+   
+    @include media(md)
+    {
+        font-size: $size-3xl!important;
+    }
     /* or 42px */
     text-align: center;
     letter-spacing: 0.05em;
@@ -103,28 +148,38 @@ h3 {
 
 .body-div {
     position: absolute;
-    left: 3.08%;
-    right: 3.08%;
-    top: 70.59%;
-    bottom: 10.63%;
+    left: 3.05%;
+    right: 3.05%;
+    top: 60.44%;
+    bottom: 13.4%;
+    
+    @include media(md){
+        font-size: $size-lg;
+        position: absolute;
+        left: 3.08%;
+        right: 3.08%;
+        top: 70.59%;
+        bottom: 10.63%;
+    }
+    
 
     .transparent
     {
     /* secundario */
-    color: #2A5678;
+    color: $color-secondary
     }
 
     .color {
-        color: #EFECE5;
+        color: $color-bg;
     }
 }
 
 /* Parrafo */
 p {
-    font-family: Raleway;
+    font-family: $raleway;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: $size-sm;
     line-height: 150%;
     
     /* or 30px */
