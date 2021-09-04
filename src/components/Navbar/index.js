@@ -23,33 +23,40 @@ const Navbar = () => {
                     <img src={menuIcon} alt="Icon menu"/>
             )}
             </div>
-            <a  href='/'><img className='logo'alt="Logo" src={logo}/></a>
+            <div className="logo-container">
+                <a href='/'><img className='logo'alt="Logo" src={logo}/></a>
+
+            </div>
             <div className={click ? "nav-options active" : "nav-options"}>
-                    <ul>
-                        <li className="option" onClick={closeMobileMenu}>
-                            <img className="hidden" alt="Icon nuestra bodega" src={bodegaIcon}/>
-                            <a href="#">Bodega Wineberry</a>
-                        </li>
-                        <li className="option" onClick={closeMobileMenu}>
-                            <img className="hidden"  alt="Icon nuestros vinos" src={vinosIcon}/>
-                            <a href="#">Nuestros vinos</a>
-                        </li>
-                        <li className="option" onClick={closeMobileMenu}>
-                            <img className="hidden"  alt="Icon galeria" src={galeriaIcon}/>
-                            <a href="#">Galeria</a>
-                        </li>
-                        <li className="option hidden" onClick={closeMobileMenu}>
-                            <img className="hidden" alt="Icon sobre nosotros" src={nosotrosIcon}/>
-                            <a className="hidden" href="#">Sobre nosotros</a>
-                        </li>
-                        <li className="option" onClick={closeMobileMenu}>
-                            <img className="hidden" alt="Icon contacto" src={contactoIcon}/>
-                            <a className="option-link" href="#">Contactanos</a>
-                        </li>
-                    </ul>
-                </div>     
+                <ul>
+                    <li className="option" onClick={closeMobileMenu}>
+                        <img className="hidden" alt="Icon nuestra bodega" src={bodegaIcon}/>
+                        <a href="#">Bodega Wineberry</a>
+                    </li>
+                    <li className="option" onClick={closeMobileMenu}>
+                        <img className="hidden"  alt="Icon nuestros vinos" src={vinosIcon}/>
+                        <a href="#">Nuestros vinos</a>
+                    </li>
+                    <li className="option" onClick={closeMobileMenu}>
+                        <img className="hidden"  alt="Icon galeria" src={galeriaIcon}/>
+                        <a href="#">Galeria</a>
+                    </li>
+                    <li className="option hidden" onClick={closeMobileMenu}>
+                        <img className="hidden" alt="Icon sobre nosotros" src={nosotrosIcon}/>
+                        <a className="hidden" href="#">Sobre nosotros</a>
+                    </li>
+                    <li className="option hidden" onClick={closeMobileMenu}>
+                        <img className="hidden" alt="Icon contacto" src={contactoIcon}/>
+                        <a className="option-link hidden" href="#">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+            <button className="button">
+                <a className="option-link" href="#">Contactanos</a>
+            </button>
+
             <div className="mobile-search">
-                <img src={searchIcon} alt="Menu hamburguesa"/>
+                <img src={searchIcon} alt="Icon busqueda"/>
             </div>
         </nav>
     );
