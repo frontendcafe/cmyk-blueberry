@@ -14,7 +14,7 @@ const CardStore = ({ isTransparent, title, body }) => {
           ></img>
         </div>
         <div className="title-div">
-          <h3 className={isTransparent ? "transparent" : "color"}>{title}</h3>
+          <h3 className={` h3 ${isTransparent ? "transparent" : "color"}`}>{title}</h3>
         </div>
         <div className="body-div">
           <p className={isTransparent ? "transparent" : "color"}>{body}</p>
