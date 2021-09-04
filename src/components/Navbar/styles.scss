@@ -9,39 +9,44 @@
     align-items: center;
     position: fixed;
     left:0;
-    
     top:0;
+    z-index: 99;
     @include media(md) {
         display: grid;
-        
         grid-template-columns: 1fr 5fr 1fr;
         height: 100px;
     }
 }
 
-.logo {
-    max-width: 100px;
-    width: 50%;
+.mobile-menu {
+    padding-left: 20px;
     @include media(md) {
-        width: 100%;
+        display: none;
+    }
+
+    .icon-close {
+        position: relative;
+        z-index: 2;
+        width: 16px;
     }
 }
 
 .logo-container {
     @include media(md) {
-        margin-left: 16px;
+        margin-left: 1rem;
     }
+    .logo {
+        max-width: 100px;
+        width: 50%;
+        @include media(md) {
+            width: 100%;
+        }
+    }
+
     a {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-}
-
-.hidden {
-    @include media(md) {
-        display: none;
     }
 }
 
@@ -58,14 +63,31 @@
     transition: all 0.5s ease;
     list-style-type: none;
     @include media(md) {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
         opacity: 1;
         height: 100px;
         position: static;
-        left: 0;
         justify-content: center;
         align-items: center;
+    }
+
+    ul {
+        margin-top: 60px;
+        @include media(md) {
+            display: flex;
+            margin-top: 0;
+        }
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+        a {
+            font-size: $size-md;
+            text-decoration: none;
+            color: $color-secondary;
+            padding: 0px 5px;
+        }
     }
 }
 
@@ -74,42 +96,6 @@
     top: 0px;
     opacity: 1;
     z-index: 1;    
-}
-
-.nav-options ul {
-    margin-top: 60px;
-    @include media(md) {
-        display: flex;
-        margin-top: 0;
-    }
-}
-
-.mobile-menu {
-    padding-left: 20px;
-    @include media(md) {
-        display: none;
-    }
-
-}
-
-.mobile-search {
-    padding-right: 20px;
-    @include media(md) {
-        display: none;
-    }
-}
-
-.option {
-    display: flex;
-    margin: 17px;
-    align-items: center;
-}
-
-.option a {
-    font-size: $size-md;
-    text-decoration:none;
-    color: $color-secondary;
-    padding-left: 5px;
 }
 
 .button {
@@ -127,18 +113,20 @@
         margin-right: 16px;
         .option-link {
             color: $color-bg;
+            font-size: $size-md;
         }
     }
 }
 
-.option-link {
-    font-size: $size-md;
-    color: $color-secondary;
+.mobile-search {
+    padding-right: 20px;
+    @include media(md) {
+        display: none;
+    }
+}
 
-} 
-
-.icon-close {
-    position: relative;
-    z-index: 2;
-    width: 16px;
+.hidden {
+    @include media(md) {
+        display: none;
+    }
 }

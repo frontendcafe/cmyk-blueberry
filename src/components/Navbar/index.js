@@ -18,14 +18,13 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="mobile-menu" onClick={handleClick}>
                 {click ? (
-                <img className="icon-close" src={closeIcon} alt="Icon cierre"/>
+                    <img className="icon-close" src={closeIcon} alt="Icon cierre"/>
                 ) : (
                     <img src={menuIcon} alt="Icon menu"/>
             )}
             </div>
             <div className="logo-container">
                 <a href='/'><img className='logo'alt="Logo" src={logo}/></a>
-
             </div>
             <div className={click ? "nav-options active" : "nav-options"}>
                 <ul>
@@ -47,14 +46,13 @@ const Navbar = () => {
                     </li>
                     <li className="option hidden" onClick={closeMobileMenu}>
                         <img className="hidden" alt="Icon contacto" src={contactoIcon}/>
-                        <a className="option-link hidden" href="#">Contactanos</a>
+                        <a className="hidden" href="#">Contactanos</a>
                     </li>
                 </ul>
             </div>
             <button className="button">
                 <a className="option-link" href="#">Contactanos</a>
             </button>
-
             <div className="mobile-search">
                 <img src={searchIcon} alt="Icon busqueda"/>
             </div>
