@@ -1,0 +1,62 @@
+@use 'src/styles/utils' as *;
+
+.card-desktop {
+  display: grid;
+  position: relative;
+  width: 455px;
+  height: 644px;
+  box-shadow: $shadow-lg;
+  padding: 64px $size-5xl;
+  border-radius: $rounded;
+  align-content: flex-end;
+  grid-auto-rows: min-content;
+
+  &.primary {
+    color: white;
+    align-content: flex-start;
+    background-color: $color-primary;
+    border: 5px solid $color-primary;
+
+    .card-desktop__content {
+      color: $color-bg;
+    }
+
+    .card-desktop__image {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &.secondary {
+    color: $color-primary;
+    border: 5px solid $color-secondary;
+
+    .card-desktop__content {
+      color: $color-text;
+    }
+  }
+
+  &__header {
+    display: grid;
+    align-items: flex-end;
+    column-gap: $size-base;
+    padding-bottom: $size-lg;
+    grid-template-columns: max-content auto;
+
+    &-title {
+      font-weight: bold;
+      font-size: $size-3xl;
+    }
+  }
+
+  &__content {
+    font-size: $size-lg;
+    line-height: $size-4xl;
+    letter-spacing: 0.05rem;
+  }
+
+  &__image {
+    mix-blend-mode: multiply;
+  }
+}
