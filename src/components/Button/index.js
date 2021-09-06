@@ -14,35 +14,5 @@ export const Button = (props) => {
 
 
 
-// function Button() {
-//   return (
-//     <>
-
-
-//     <button className="primary">
-//       Contactanos
-//     </button>
-
-//     <button className="secondary">
-//     Quiero saber mas
-//     </button>
-    
-
-//         <button className="light">
-//        Hola
-//     </button>
-
-//     <button className="whit">
-//     CONOCE LO NUEVO
-//     </button>
-
-//     <button className="info">
-//     Más información   > 
-//     </button>
-
-//     </>
-
-//   );
-// }
 
 export default Button;
