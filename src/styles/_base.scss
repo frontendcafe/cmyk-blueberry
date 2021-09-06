@@ -17,6 +17,7 @@ html {
   -moz-tab-size: 4;
   line-height: $base-leading;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
