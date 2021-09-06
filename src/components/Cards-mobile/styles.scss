@@ -1,12 +1,11 @@
 @use 'src/styles/utils' as *;
 
-
 .card-container {
-    max-width: 400px;
+    max-width: 330px;
     border-radius: $rounded;
     background-color: $color-bg;
     box-shadow: $shadow;
-    font-size: $size-sm;
+    font-size: 10px;
     overflow: hidden;
     margin: 15px;
 
@@ -16,11 +15,22 @@
         display: flex;
         justify-content: space-around;
         height: 3.5em;
-        font-weight: bold;
+        padding: $size-sm;
+
         &-left {
             width:90%;
             display: flex;
             align-items: center;
+
+            .logo {
+                height: 24px;
+            }
+
+            h1 {
+                margin-left: $size-sm;
+                font-size: $size-sm;
+                font-weight: bold;
+            }
         }
     }
 
@@ -42,6 +52,7 @@
 /* ANIMATIONS & CHANGES */ 
 
 .small-card {
+    height: 176px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
@@ -50,12 +61,29 @@
 }
 
 .full-card {
+    height: 415px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "img img"
     "top top"
     "desc desc";
+
+    .card-image {
+        height: 178px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-description {
+        height: 180px;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .openCard {
