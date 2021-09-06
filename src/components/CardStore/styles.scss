@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
 
 .card {
-
   .transparent-card {
     /* primario */
     border: 3px solid $color-primary;
@@ -30,12 +29,12 @@
   display: flex;
   width: 340px;
   height: 321px;
-  left: 15px;
-  top: 50px;
 
   @include media(md) {
     width: 455px;
     height: 644px;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   flex-direction: column;
   justify-content: center;
@@ -50,20 +49,32 @@
   height: 10%;
   width: 10%;
   margin-top: 5rem;
-  margin-bottom: 0.2rem;
-  display: flexbox;
-  
+  margin-bottom: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media(md) {
+    margin-bottom: 0.1rem; 
+  }
+
   .transparent {
     margin-bottom: 3rem;
   }
 }
 
 .vector {
-  height: 100%;
+  position: absolute;
+  // height: 100%;
+}
+.heart-vector {
+  position: absolute;
+  margin-top: 1rem;
 }
 
 .title-div {
-  width: 80%;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-bottom: 0.2rem;
 
   .transparent {
@@ -80,7 +91,6 @@
   font-style: normal;
   font-weight: bold;
   line-height: 150%;
-
   font-size: $base-size !important;
 
   @include media(md) {
@@ -92,11 +102,11 @@
 }
 
 .body-div {
-  width: 80%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @include media(md) {
     font-size: $size-lg;
-    
   }
 
   .transparent {

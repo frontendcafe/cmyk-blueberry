@@ -1,6 +1,7 @@
 import "./styles.scss";
 import grapeVector from "../../assets/img/grapeVector.svg";
 import homeVector from "../../assets/img/homeVector.svg";
+import heartVector from "../../assets/img/heartVector.svg";
 
 const CardStore = ({ isTransparent, title, body }) => {
   return (
@@ -11,6 +12,11 @@ const CardStore = ({ isTransparent, title, body }) => {
             alt=""
             className="vector"
             src={isTransparent ? grapeVector : homeVector}
+          ></img>
+          <img
+            alt=""
+            className="heart-vector"
+            src={isTransparent ? "" : heartVector}
           ></img>
         </div>
         <div className="title-div">
