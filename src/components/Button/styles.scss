@@ -1,6 +1,5 @@
 @use 'src/styles/utils' as *;
 
-
 // boton azul para navbar y header
 
 #primary {
@@ -18,62 +17,53 @@
   top: 547px;
   border-radius: 7.23005px;
   padding: 7.23005px 14.4601px;
-  
+}
 
+@include media(md) {
+  #primary {
+    font-size: 20px;
+    width: 184px;
+    height: 60px;
+    border-radius: $rounded;
+    padding: 5px 16px;
   }
 
-  @include media(md) {
-    #primary {
-      font-size: 20px;
-      width: 184px;
-      height: 60px;
-      border-radius: $rounded;
-      padding: 5px 16px;
-
-    }
-
-    #primary:hover {
-      box-shadow: $shadow;
-      
-    }
-
+  #primary:hover {
+    box-shadow: $shadow;
   }
+}
 
-  // boton blanco sin box shadow
+// boton blanco sin box shadow
 
 #secondary {
   background: $color-bg;
   font-family: $raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 14,46px;
+  font-size: 14, 46px;
   letter-spacing: 0.05em;
   align-items: center;
   left: 7.65%;
-right: 8.2%;
-top: 85.33%;
-bottom: 3.85%;
+  right: 8.2%;
+  top: 85.33%;
+  bottom: 3.85%;
   border-radius: 7.23005px;
   padding: 7.23005px 14.4601px;
-
 }
 
 @include media(md) {
-  
   #secondary {
-  font-size: 20px;
-  width: 223px;
-  height: 50px;
-  left: 0px;
-  top: 346px;
-  border-radius: $rounded;
-  padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    width: 223px;
+    height: 50px;
+    left: 0px;
+    top: 346px;
+    border-radius: $rounded;
+    padding: 10px 20px 10px 20px;
   }
-
 }
 
-
-//boton blanco con bordes y $rounded (10px) - 
+//boton blanco con bordes y $rounded (10px) -
 // No lo encontré en version mobile
 
 #light {
@@ -92,14 +82,11 @@ bottom: 3.85%;
   border-radius: $rounded;
   padding: 10px, 20px, 10px, 20px;
   box-shadow: $shadow-lg;
-
 }
 
 #light:hover {
   box-shadow: $shadow-lg;
-  
 }
-
 
 //boton blanco con bordes y $rounded-lg (20px)
 // No lo encontré en version mobile
@@ -119,29 +106,27 @@ bottom: 3.85%;
   border-radius: $rounded-lg;
   padding: 10px, 20px, 10px, 20px;
   box-shadow: $shadow-lg;
-
 }
 
 //boton con fondo blanco con bordes azules
 
 #blueborder {
-font-family: $raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-letter-spacing: 0.05em;
-background: $color-bg;
-color: $color-primary;
-justify-content: center;
-width: 191.98px;
-height: 36.49px;
-left: 265px;
-top: 20px;
-padding: 6.2449px 12.4898px;
-border-radius: 7.83673px;
-border: 2px solid $color-primary;
-box-sizing: border-box;
-
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  background: $color-bg;
+  color: $color-primary;
+  justify-content: center;
+  width: 191.98px;
+  height: 36.49px;
+  left: 265px;
+  top: 20px;
+  padding: 6.2449px 12.4898px;
+  border-radius: 7.83673px;
+  border: 2px solid $color-primary;
+  box-sizing: border-box;
 }
 
 @include media(md) {
@@ -153,10 +138,8 @@ box-sizing: border-box;
     top: 172px;
     padding: 10px 20px;
     border-radius: $rounded;
-
   }
 }
-
 
 //boton fondo blanco con bordes verdes
 
@@ -177,22 +160,16 @@ box-sizing: border-box;
   border-radius: 7.83673px;
   border: 2px solid $color-secondary;
   box-sizing: border-box;
-  
+}
+
+@include media(md) {
+  #greenborder {
+    font-size: 20px;
+    width: 245px;
+    height: 50px;
+    left: 265px;
+    top: 172px;
+    padding: 10px 20px;
+    border-radius: $rounded;
   }
-
-  @include media(md) {
-    #greenborder {
-      font-size: 20px;
-      width: 245px;
-      height: 50px;
-      left: 265px;
-      top: 172px;
-      padding: 10px 20px;
-      border-radius: $rounded;
-
-    }
-  }
-
-
-
-
+}
