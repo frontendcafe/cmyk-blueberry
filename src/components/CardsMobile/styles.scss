@@ -1,0 +1,191 @@
+@use 'src/styles/utils' as *;
+
+.card-container {
+    max-width: 330px;
+    border-radius: $rounded;
+    background-color: $color-bg;
+    box-shadow: $shadow;
+    font-size: 10px;
+    overflow: hidden;
+    margin: 15px;
+
+    .card-title {
+        grid-area: top;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        height: 3.5em;
+        padding: $size-sm;
+
+        &-left {
+            width:90%;
+            display: flex;
+            align-items: center;
+
+            .logo {
+                height: 24px;
+            }
+
+            h1 {
+                margin-left: $size-sm;
+                font-size: $size-sm;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .card-image {
+        grid-area: img;
+        display: inline-block;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .card-description {
+        grid-area: desc;
+        padding: $size-sm;
+    }
+}
+
+/* ANIMATIONS & CHANGES */ 
+
+.small-card {
+    height: 176px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "top top"
+    "img desc";
+}
+
+.full-card {
+    height: 415px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "img img"
+    "top top"
+    "desc desc";
+
+    .card-image {
+        height: 178px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-description {
+        height: 180px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.openCard {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.closeCard {
+    -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-fwd {
+    0% {
+        -webkit-transform: translateZ(-80px);
+                transform: translateZ(-80px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in-fwd {
+    0% {
+        -webkit-transform: translateZ(-80px);
+                transform: translateZ(-80px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.rotate {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+        animation: rotate-center 0.6s ease-in-out both;
+}
+
+.rotateBack {
+    -webkit-animation: rotate-back 0.6s ease-in-out both;
+        animation: rotate-back 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+}
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+}
+
+@-webkit-keyframes rotate-back {
+    0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+}
+@keyframes rotate-back {
+    0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+}
