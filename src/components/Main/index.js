@@ -6,7 +6,7 @@ import imagen from '../../assets/imagen-portada-2.png';
 function Main() {
         return ( 
             <div className = "container">
-                <div>
+                <div className="texto">
                     <h1>
                        <span className = "texto-simple">
                             <span className = "texto-simple1">
