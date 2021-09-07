@@ -31,7 +31,7 @@ const Navbar = () => {
             </div>
 
             <div className="logo-container">
-                <a onclick= {scrollToTop} href='/'><img className='logo' alt="Logo Wineberry" src={logo}/></a>
+                <a onClick= {scrollToTop} href='/'><img className='logo' alt="Logo Wineberry" src={logo}/></a>
             </div>
 
             <div className={click ? "nav-options active" : "nav-options"}>
