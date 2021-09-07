@@ -1,0 +1,138 @@
+@use 'src/styles/utils' as *;
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+
+.container {
+  min-height: 92.2vh;
+  width: 100vw;
+  position: relative;
+  font-family: $raleway;
+  display: flex;
+  align-content: space-between;
+
+  h1 {
+    z-index: 2;
+    position: absolute;
+    margin-left: 7vw;
+    top: 70vh;
+  }
+  .texto-simple {
+    font-size: $size-2xl;
+    letter-spacing: 0.05em;
+    line-height: 150%;
+    font-weight: 800;
+    height: 72px;
+    .texto-simple2 {
+      height: $size-5xl !important;
+      margin-left: 35vw;
+    }
+  }
+  .texto-complejo {
+    font-size: 39px;
+    font-family: "Yesteryear";
+    font-weight: normal;
+    top: 132px;
+    letter-spacing: 0.05em;
+    height: 58px;
+  }
+  button {
+    z-index: 2;
+    position: absolute;
+    background-color: $color-primary;
+    border-radius: 7.23px;
+    padding: 10px 20px;
+    color: $color-bg;
+    font-size: $size-sm;
+    margin-left: 30vw;
+    top: 93vh;
+  }
+  .img-container {
+    min-height: 92.2vh;
+    width: 100vw;
+    position: absolute;
+    background: linear-gradient(
+        180deg,
+        rgba(239, 236, 229, 0) 0%,
+        rgba(239, 236, 229, 0.49) 48.36%,
+        #efece5 95.48%
+      ),
+      url("../../assets/imagen-portada-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    z-index: 1;
+    .imagen {
+      visibility: hidden;
+    }
+    .imagen-1 {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    background-color: $color-bg;
+    width: 100vw;
+    min-height: 92.2vh;
+    color: $color-secondary;
+    font-family: $raleway;
+    position: relative;
+
+    .texto-simple {
+      font-size: 44px;
+      letter-spacing: 0.05em;
+      line-height: 150%;
+      font-weight: 500;
+      .texto-simple2 {
+        margin-left: 180px;
+      }
+    }
+    .texto-complejo {
+      font-size: 66px;
+      font-family: "Yesteryear";
+      font-weight: normal;
+      padding: $size-base;
+      top: 132px;
+      letter-spacing: 0.05em;
+    }
+    h1 {
+      margin-top: 45%;
+      margin-left: $size-base;
+      position: static;
+    }
+    button {
+      background-color: $color-primary;
+      border-radius: $rounded;
+      padding: 10px 20px;
+      color: $color-bg;
+      font-size: $size-lg;
+      margin-left: $size-base;
+      top: auto;
+    }
+    .img-container {
+      overflow: hidden;
+      height: 92.2vh;
+      width: 700px;
+      position: relative;
+      background: none;
+      display: block;
+      float: right;
+      .imagen {
+        position: absolute;
+        clip-path: inset(0px 0px round 50%);
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        visibility: visible;
+      }
+      .imagen-1 {
+        clip-path: inset(0 0 0 50%);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        visibility: visible;
+      }
+    }
+  }
+}
