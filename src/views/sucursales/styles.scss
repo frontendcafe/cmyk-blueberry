@@ -1,0 +1,29 @@
+@use 'src/styles/utils' as *;
+
+#sucursales-div {
+  background-color: $color-bg;
+  height: 100vh;
+  width: 100%;
+  background: url("../../assets/sucursalesBackground.jpg") no-repeat;
+  background-size: 100% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $size-5xl;
+    line-height: 150%;
+    margin-top: 2.5rem;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
