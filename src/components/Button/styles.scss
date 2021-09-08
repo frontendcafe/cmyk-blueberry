@@ -10,15 +10,16 @@
   letter-spacing: 0.05em;
   color: $color-bg;
   background: $color-primary;
-  border-radius: 7.23005px;
-  padding: 7.23005px 14.4601px;
+  height: auto;
+  width: auto;
+  border-radius: $rounded-mobile;
+  padding: 7px 14px;
 }
 
 @include media(md) {
   .primary {
+    min-height: 60px;
     font-size: $font-size-buttom;
-    width: 184px;
-    height: 60px;
     border-radius: $rounded;
     padding: 5px 16px;
   }
@@ -38,17 +39,16 @@
   letter-spacing: 0.05em;
   background: $color-bg;
   color: $color-secondary;
-  height: 36.15px;
-  width: 154px;
+  min-height: auto;
+  width: auto;
   padding: 7px 14px 7px 14px;
-  border-radius: 7.23005px;
+  border-radius: $rounded-mobile;
 }
+
 
 @include media(md) {
   .secondary {
     font-size: $font-size-buttom;
-    width: 223px;
-    height: 50px;
     padding: 9px 18px 9px 18px;
     border-radius: $rounded;
   }
@@ -66,8 +66,8 @@
   letter-spacing: 0.05em;
   background: $color-bg;
   color: $color-secondary;
-  height: 50px;
-  width: 213px;
+  min-height: auto;
+  width: auto;
   border-radius: $rounded;
   padding: 10px 20px 10px 20px;
   box-shadow: $shadow-lg;
@@ -88,8 +88,8 @@
   font-weight: 700;
   background: $color-bg;
   color: $color-secondary;
-  height: 50px;
-  width: 223px;
+  min-height: auto;
+  width: auto;
   border-radius: $rounded-lg;
   padding: 10px 20px 10px 20px;
   box-shadow: $shadow-lg;
@@ -105,10 +105,10 @@
   letter-spacing: 0.05em;
   background: $color-bg;
   color: $color-primary;
-  width: 191.98px;
-  height: 36.49px;
-  padding: 6.2449px 12.4898px;
-  border-radius: 7.83673px;
+  min-height: auto;
+  width: auto;
+  padding: 6px 12px;
+  border-radius: $rounded-mobile;
   border: 2px solid $color-primary;
   box-sizing: border-box;
 }
@@ -116,8 +116,6 @@
 @include media(md) {
   .blueborder {
     font-size: $font-size-buttom;
-    width: 245px;
-    height: 50px;
     padding: 10px 20px;
     border-radius: $rounded;
   }
@@ -133,10 +131,10 @@
   letter-spacing: 0.05em;
   background: $color-bg;
   color: $color-secondary;
-  width: 191.98px;
-  height: 36.49px;
-  padding: 6.2449px 12.4898px;
-  border-radius: 7.83673px;
+  min-height: auto;
+  width: auto;
+  padding: 6px 12px;
+  border-radius: $rounded-mobile;
   border: 2px solid $color-secondary;
   box-sizing: border-box;
 }
@@ -144,8 +142,6 @@
 @include media(md) {
   .greenborder {
     font-size: $font-size-buttom;
-    width: 245px;
-    height: 50px;
     padding: 10px 20px;
     border-radius: $rounded;
   }
