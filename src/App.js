@@ -1,11 +1,11 @@
-import Button from './components/Button'
+import Button from './components/Button';
+import Main from './components/Main';
+
 
 function App() {
   return (
     <div className="App">
-      HOLA BLUEBERRY!!
-
-      <Button />
+      <Main/>
     </div>
   );
 }

@@ -19,12 +19,12 @@
     line-height: 150%;
     font-weight: 800;
     height: 72px;
-    .texto-simple2 {
+    .texto__alineado__derecha {
       height: $size-5xl !important;
       margin-left: 35vw;
     }
   }
-  .texto-complejo {
+  .texto__cursiva {
     font-size: 39px;
     font-family: "Yesteryear";
     font-weight: normal;
@@ -57,10 +57,10 @@
     background-position: center;
 
     z-index: 1;
-    .imagen {
+    .img__circular {
       visibility: hidden;
     }
-    .imagen-1 {
+    .img__rectangular {
       visibility: hidden;
     }
   }
@@ -84,11 +84,11 @@
       letter-spacing: 0.05em;
       line-height: 150%;
       font-weight: 500;
-      .texto-simple2 {
+      .texto__alineado__derecha {
         margin-left: 180px;
       }
     }
-    .texto-complejo {
+    .texto__cursiva {
       font-size: 66px;
       font-family: "Yesteryear";
       font-weight: normal;
@@ -118,7 +118,7 @@
       background: none;
       display: block;
       float: right;
-      .imagen {
+      .img__circular {
         position: absolute;
         clip-path: inset(0px 0px round 50%);
         height: 100%;
@@ -126,7 +126,7 @@
         z-index: 1;
         visibility: visible;
       }
-      .imagen-1 {
+      .img__rectangular {
         clip-path: inset(0 0 0 50%);
         height: 100%;
         width: 100%;

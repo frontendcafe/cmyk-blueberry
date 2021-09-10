@@ -9,14 +9,14 @@ function Main() {
                 <div className="texto">
                     <h1>
                        <span className = "texto-simple">
-                            <span className = "texto-simple1">
+                            <span>
                                 Tu imaginación<br/>
                             </span>
-                            <span className = "texto-simple2">
+                            <span className = "texto__alineado__derecha">
                                no tiene limites,<br/>
                             </span>
                         </span> 
-                        <span className = "texto-complejo">
+                        <span className = "texto__cursiva">
                          la nuestra tampoco... <br/>
                         </span>
                     </h1>
@@ -25,8 +25,8 @@ function Main() {
                     </button>
                 </div>
                 <div className = "img-container">
-                    <img src={imagen} className = "imagen" alt="imagen de una copa de vino"/>
-                    <img src={imagen} className = "imagen-1" alt="imagen de una copa de vino"/>
+                    <img src={imagen} className = "img__circular" alt="imagen de una copa de vino"/>
+                    <img src={imagen} className = "img__rectangular" alt="imagen de una copa de vino"/>
                 </div>
             </div> );
 }

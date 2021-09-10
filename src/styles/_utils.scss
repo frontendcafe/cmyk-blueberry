@@ -2,50 +2,45 @@
 $base-size: 16px;
 $base-leading: 1.2;
 
-
 /* Fonts */
-$raleway: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-
+$raleway: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif;
 
 /* Colors */
-$color-primary: #4F84F9;
-$color-secondary: #2A5678;
+$color-primary: #4f84f9;
+$color-secondary: #2a5678;
 
-$color-bg: #EFECE5;
-$color-card: #524FF9;
+$color-bg: #efece5;
+$color-card: #524ff9;
 $color-text: #323037;
-$color-text-disabled: #B3B3B3;
-
+$color-text-disabled: #b3b3b3;
 
 /* Sizes */
-$size-sm: 0.875rem;     // 14px
-$size-base: 1rem;       // $base-size
-$size-md: 1.125rem;     // 18px
-$size-lg: 1.25rem;      // 20px
-$size-xl: 1.375rem;     // 22px
-$size-2xl: 1.5rem;      // 24px
-$size-3xl: 1.75rem;     // 28px
-$size-4xl: 1.875rem;    // 30px
-$size-5xl: 2.25rem;     // 36px
-
+$size-sm: 0.875rem; // 14px
+$size-base: 1rem; // $base-size
+$size-md: 1.125rem; // 18px
+$size-lg: 1.25rem; // 20px
+$size-xl: 1.375rem; // 22px
+$size-2xl: 1.5rem; // 24px
+$size-3xl: 1.75rem; // 28px
+$size-4xl: 1.875rem; // 30px
+$size-5xl: 2.25rem; // 36px
 
 /* Rounded */
 $rounded: 10px;
 $rounded-lg: 20px;
 $rounded-full: 50%;
 
-
 /* Shadow */
 $shadow: 4px 5px 50px rgba(0, 0, 0, 0.4);
 $shadow-lg: 0px 1px 10px rgba(0, 0, 0, 0.25);
-
 
 /* Media Queries */
 $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 1024px,
-  xl: 1280px
+  xl: 1280px,
 );
 
 @mixin media($media) {
@@ -53,9 +48,7 @@ $breakpoints: (
     @media screen and (min-width: map-get($breakpoints, $media)) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error 'Los valores permitidos son: sm, md, lg, xl';
   }
 }
