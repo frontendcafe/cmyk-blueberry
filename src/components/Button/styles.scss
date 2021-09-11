@@ -1,24 +1,29 @@
 @use 'src/styles/utils' as *;
 
 .button {
-  // boton azul para navbar y header
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  height: auto;
+  width: auto;
 
+  @include media(md){
+    font-size: $font-size-buttom;
+    border-radius: $rounded;
+    font-size: $font-size-buttom;
+  }
+
+  // boton azul para navbar y header
   &--primary {
-    font-style: normal;
-    font-weight: bold;
     font-size: $size-sm;
-    letter-spacing: 0.05em;
     color: $color-bg;
     background: $color-primary;
-    height: auto;
-    width: auto;
     border-radius: $rounded-mobile;
     padding: 7px 14px;
 
     @include media(md) {
       min-height: 60px;
-      font-size: $font-size-buttom;
-      border-radius: $rounded;
       padding: 5px 16px; }
 
       &:hover {
@@ -29,39 +34,26 @@
     // boton blanco sin box shadow
 
     &--secondary {
-      font-family: $raleway;
-      font-style: normal;
-      font-weight: bold;
       font-size: $size-sm;
-      letter-spacing: 0.05em;
       background: $color-bg;
       color: $color-secondary;
-      min-height: auto;
-      width: auto;
       padding: 7px 14px 7px 14px;
       border-radius: $rounded-mobile;
     
 
     @include media(md) {
-      font-size: $font-size-buttom;
       padding: 9px 18px 9px 18px;
-      border-radius: $rounded;
     } }
 
     //boton blanco con bordes y $rounded (10px) -
     // No lo encontré en version mobile
 
     &--light {
-      font-family: $raleway;
-      font-style: normal;
       font-size: $font-size-buttom;
       font-weight: 700;
       line-height: 30px;
-      letter-spacing: 0.05em;
       background: $color-bg;
       color: $color-secondary;
-      min-height: auto;
-      width: auto;
       border-radius: $rounded;
       padding: 10px 20px 10px 20px;
       box-shadow: $shadow-lg;
@@ -76,14 +68,10 @@
     // No lo volvi a encontrar en figma asi que creo que dejo de existir
 
     &--light-lg {
-      font-family: $raleway;
-      font-style: normal;
       font-size: $font-size-buttom;
       font-weight: 700;
       background: $color-bg;
       color: $color-secondary;
-      min-height: auto;
-      width: auto;
       border-radius: $rounded-lg;
       padding: 10px 20px 10px 20px;
       box-shadow: $shadow-lg;
@@ -92,39 +80,25 @@
     //boton con fondo blanco con bordes azules
 
     &--blueborder {
-      font-family: $raleway;
-      font-style: normal;
-      font-weight: bold;
       font-size: $base-size;
-      letter-spacing: 0.05em;
       background: $color-bg;
       color: $color-primary;
-      min-height: auto;
-      width: auto;
       padding: 6px 12px;
       border-radius: $rounded-mobile;
       border: 2px solid $color-primary;
       box-sizing: border-box;
 
       @include media(md) {
-        font-size: $font-size-buttom;
         padding: 10px 20px;
-        border-radius: $rounded;
       }
     }
 
     //boton fondo blanco con bordes verdes
 
     &--greenborder {
-      font-family: $raleway;
-      font-style: normal;
-      font-weight: bold;
       font-size: 16px;
-      letter-spacing: 0.05em;
       background: $color-bg;
       color: $color-secondary;
-      min-height: auto;
-      width: auto;
       padding: 6px 12px;
       border-radius: $rounded-mobile;
       border: 2px solid $color-secondary;
@@ -132,9 +106,7 @@
     
 
     @include media(md) {
-      font-size: $font-size-buttom;
       padding: 10px 20px;
-      border-radius: $rounded;
     }
   }
 }

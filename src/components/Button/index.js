@@ -3,7 +3,7 @@ import "./styles.scss";
 export const Button = (props) => {
   return (
     <button
-      className={`button${props.variant ? ` button--${props.variant}` : ""}`}
+      className={`button button--${props.variant}`}
     >
       {props.text}
     </button>
