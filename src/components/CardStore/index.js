@@ -1,7 +1,7 @@
 import "./styles.scss";
-import grapeVector from "../../assets/img/grapeVector.svg";
-import homeVector from "../../assets/img/homeVector.svg";
-import heartVector from "../../assets/img/heartVector.svg";
+import grapeVector from "../../assets/grapeVector.svg";
+import homeVector from "../../assets/homeVector.svg";
+import heartVector from "../../assets/heartVector.svg";
 
 const CardStore = ({ isTransparent, title, body }) => {
   return (

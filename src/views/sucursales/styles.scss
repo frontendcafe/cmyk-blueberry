@@ -15,15 +15,29 @@
     font-family: $raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: $size-5xl;
     line-height: 150%;
     margin-top: 2.5rem;
+    font-size: $base-size;
+    color: $color-primary;
+
+    @include media(md){
+      font-size: $size-5xl;
+      color: $color-secondary;
+    }
 }
 
 #cards {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     margin-top: 3rem;
+
+    @include media(lg) {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+    }
 }
