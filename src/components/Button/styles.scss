@@ -1,155 +1,98 @@
 @use 'src/styles/utils' as *;
 
-// boton azul para navbar y header
-
-.primary {
+.button {
   font-family: $raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 14.4601px;
   letter-spacing: 0.05em;
-  color: $color-bg;
-  align-items: center;
-  background: $color-primary;
-  border-radius: 7.23005px;
-  padding: 7.23005px 14.4601px;
-}
+  height: auto;
+  width: auto;
 
-@include media(md) {
-  .primary {
+  @include media(md) {
     font-size: $font-size-buttom;
-    width: 184px;
-    height: 60px;
     border-radius: $rounded;
-    padding: 5px 16px;
+    font-size: $font-size-buttom;
   }
 
-  .primary:hover {
-    box-shadow: $shadow;
+  // boton azul para navbar y header
+  &--primary {
+    font-size: $size-sm;
+    color: $color-bg;
+    background: $color-primary;
+    border-radius: $rounded-mobile;
+    padding: 7px 14px;
+
+    @include media(md) {
+      min-height: 60px;
+      padding: 5px 16px;
+    }
+
+    &:hover {
+      box-shadow: $shadow;
+    }
   }
-}
 
-// boton blanco sin box shadow
+  // boton blanco sin box shadow
 
-.secondary {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14, 46px;
-  letter-spacing: 0.05em;
-  background: $color-bg;
-  color: $color-secondary;
-  align-items: center;
-  height: 36px;
-  width: 154px;
-  padding: 7px, 14px, 7px, 14px;
-  border-radius: 7.23005px;
-}
+  &--secondary {
+    font-size: $size-sm;
+    background: $color-bg;
+    color: $color-secondary;
+    padding: 7px 14px 7px 14px;
+    border-radius: $rounded-mobile;
 
-@include media(md) {
-  .secondary {
-    font-size: $font-size-buttom;
-    width: 223px;
-    height: 50px;
-    padding: 9px, 18px, 9px, 18px;
-    border-radius: $rounded;
+    @include media(md) {
+      padding: 9px 18px 9px 18px;
+    }
   }
-}
 
-//boton blanco con bordes y $rounded (10px) -
-// No lo encontré en version mobile
+  //boton blanco con bordes y $rounded (10px) -
+  // No lo encontré en version mobile
 
-.light {
-  font-family: $raleway;
-  font-style: normal;
-  font-size: $font-size-buttom;
-  font-weight: 700;
-  line-height: 30px;
-  background: $color-bg;
-  color: $color-secondary;
-  height: 50px;
-  width: 213px;
-  border-radius: $rounded;
-  padding: 10px, 20px, 10px, 20px;
-  box-shadow: $shadow-lg;
-}
-
-.light:hover {
-  box-shadow: $shadow-lg;
-}
-
-//boton blanco con bordes y $rounded-lg (20px)
-// No lo encontré en version mobile
-
-.light-lg {
-  font-family: $raleway;
-  font-style: normal;
-  font-size: $font-size-buttom;
-  font-weight: 700;
-  line-height: 30px;
-  background: $color-bg;
-  color: $color-secondary;
-  height: 50px;
-  width: 223px;
-  border-radius: $rounded-lg;
-  padding: 10px, 20px, 10px, 20px;
-  box-shadow: $shadow-lg;
-}
-
-//boton con fondo blanco con bordes azules
-
-.blueborder {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: 0.05em;
-  background: $color-bg;
-  color: $color-primary;
-  justify-content: center;
-  width: 191.98px;
-  height: 36.49px;
-  padding: 6.2449px 12.4898px;
-  border-radius: 7.83673px;
-  border: 2px solid $color-primary;
-  box-sizing: border-box;
-}
-
-@include media(md) {
-  .blueborder {
+  &--light {
     font-size: $font-size-buttom;
-    width: 245px;
-    height: 50px;
-    padding: 10px 20px;
+    font-weight: 700;
+    line-height: 30px;
+    background: $color-bg;
+    color: $color-secondary;
     border-radius: $rounded;
+    padding: 10px 20px 10px 20px;
+    box-shadow: $shadow-lg;
+
+    &:hover {
+      box-shadow: $shadow-lg;
+    }
   }
-}
 
-//boton fondo blanco con bordes verdes
+  //boton con fondo blanco con bordes azules
 
-.greenborder {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: 0.05em;
-  background: $color-bg;
-  color: $color-secondary;
-  justify-content: center;
-  width: 191.98px;
-  height: 36.49px;
-  padding: 6.2449px 12.4898px;
-  border-radius: 7.83673px;
-  border: 2px solid $color-secondary;
-  box-sizing: border-box;
-}
+  &--blueborder {
+    font-size: $base-size;
+    background: $color-bg;
+    color: $color-primary;
+    padding: 6px 12px;
+    border-radius: $rounded-mobile;
+    border: 2px solid $color-primary;
+    box-sizing: border-box;
 
-@include media(md) {
-  .greenborder {
-    font-size: $font-size-buttom;
-    width: 245px;
-    height: 50px;
-    padding: 10px 20px;
-    border-radius: $rounded;
+    @include media(md) {
+      padding: 10px 20px;
+    }
+  }
+
+  //boton fondo blanco con bordes verdes
+
+  &--greenborder {
+    font-size: 16px;
+    background: $color-bg;
+    color: $color-secondary;
+    padding: 6px 12px;
+    border-radius: $rounded-mobile;
+    border: 2px solid $color-secondary;
+    box-sizing: border-box;
+
+    @include media(md) {
+      padding: 10px 20px;
+    }
   }
 }
