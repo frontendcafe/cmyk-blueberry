@@ -3,7 +3,7 @@
 
 .card {
   margin-bottom: 1rem;
-  .transparent-card {
+  &--transparent {
     /* primario */
     border: 3px solid $color-primary;
     box-sizing: border-box;
@@ -12,7 +12,7 @@
     filter: drop-shadow($shadow-lg);
     border-radius: $rounded;
   }
-  .color-card {
+  &--color {
     /* primario */
     background: $color-primary;
 
@@ -26,7 +26,7 @@
   }
 }
 
-.rectangle {
+.card__container {
   display: flex;
   width: 340px;
   height: 321px;
@@ -46,7 +46,7 @@
   bottom: 0%;
 }
 
-.div-vector {
+.vector {
   height: 10%;
   width: 10%;
   margin-top: 5rem;
@@ -59,34 +59,35 @@
     margin-bottom: 0.1rem; 
   }
 
-  .transparent {
+  &--transparent {
     margin-bottom: 3rem;
   }
 }
 
-.vector {
+.vector__element {
   position: absolute;
 }
-.heart-vector {
+.vector__heart {
   position: absolute;
   margin-top: 0.3rem;
 }
 
-.title-div {
+.title {
   padding-left: 2rem;
   padding-right: 2rem;
   margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
 
-  .transparent {
+  &--transparent {
     color: $color-primary;
   }
-  .color {
+  &--color {
     color: $color-bg;
   }
 }
 
 /* H3 */
-.h3 {
+.title__text {
   font-family: $raleway;
   font-style: normal;
   font-weight: bold;
@@ -101,26 +102,22 @@
   letter-spacing: 0.05em;
 }
 
-.body-div {
+.body {
   padding-left: 2rem;
   padding-right: 2rem;
 
-  @include media(md) {
-    font-size: $size-lg;
-  }
-
-  .transparent {
+  &--transparent {
     /* secundario */
     color: $color-secondary;
   }
 
-  .color {
+  &--color {
     color: $color-bg;
   }
 }
 
 /* Parrafo */
-p {
+.body__text {
   font-family: $raleway;
   font-style: normal;
   font-weight: normal;
@@ -130,4 +127,9 @@ p {
   /* or 30px */
   text-align: center;
   letter-spacing: 0.05em;
+  
+  @include media(md) {
+    font-size: $size-lg;
+  }
+
 }
