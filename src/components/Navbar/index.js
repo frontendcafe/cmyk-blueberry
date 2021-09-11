@@ -25,42 +25,42 @@ const Navbar = () => {
 
             <div className="navbar__mobile" onClick={handleClick}>
                 {isOpen ? (
-                    <img className="navbar__mobile--icon" alt="Icon cierre" src={closeIcon}/>
+                    <img className="navbar__mobile-icon" alt="Icon cierre" src={closeIcon}/>
                 ) : (
                     <img alt="Icon menu" src={menuIcon}/>
             )}
             </div>
 
             <div className="navbar__logo">
-                <a className="navbar__logo--link" onClick= {scrollToTop} href='/'><img className='navbar__logo--img' alt="Logo Wineberry" src={logo}/></a>
+                <a className="navbar__logo-link" onClick= {scrollToTop} href='/'><img className='navbar__logo-img' alt="Logo Wineberry" src={logo}/></a>
             </div>
 
             <div className={isOpen ? "navbar__menu navbar__menu--active" : "navbar__menu"}>
                 <ul>
-                    <li className="navbar__menu--item" onClick={closeMobileMenu}>
+                    <li className="navbar__menu-item" onClick={closeMobileMenu}>
                         <img className="hidden" alt="Icon nuestra bodega" src={bodegaIcon}/>
                         <a href="#nuestrasBodegas">Bodega Wineberry</a>
                     </li>
-                    <li className="navbar__menu--item" onClick={closeMobileMenu}>
+                    <li className="navbar__menu-item" onClick={closeMobileMenu}>
                         <img className="hidden"  alt="Icon nuestros vinos" src={vinosIcon}/>
                         <a href="#nuestrosVinos">Nuestros vinos</a>
                     </li>
-                    <li className="navbar__menu--item" onClick={closeMobileMenu}>
+                    <li className="navbar__menu-item" onClick={closeMobileMenu}>
                         <img className="hidden"  alt="Icon galeria" src={galeriaIcon}/>
                         <a href="#galeria">Galeria</a>
                     </li>
-                    <li className="navbar__menu--item hidden" onClick={closeMobileMenu}>
+                    <li className="navbar__menu-item hidden" onClick={closeMobileMenu}>
                         <img className="hidden" alt="Icon sobre nosotros" src={nosotrosIcon}/>
                         <a className="hidden" href="#sobreNosotros">Sobre nosotros</a>
                     </li>
-                    <li className="navbar__menu--item hidden" onClick={closeMobileMenu}>
+                    <li className="navbar__menu-item hidden" onClick={closeMobileMenu}>
                         <img className="hidden" alt="Icon contacto" src={contactoIcon}/>
                         <a className="hidden" href="#contacto">Contactanos</a>
                     </li>
                 </ul>
             </div>
             <a className="navbar__contact" href="#contacto"> 
-                <Button variant="primary" text="Contactanos" clases="navbar__contact--btn" ></Button>
+                <Button variant="primary" text="Contactanos" clases="navbar__contact-btn" ></Button>
             </a>
 
             <div className="navbar__search">
