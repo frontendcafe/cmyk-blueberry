@@ -14,9 +14,25 @@ Las ramas se crean con el comando git checkout -b nombre-rama
 Luego sobre dicha rama se harán los commits y el push para luego crear el Pull Request de la tarea.
 
 ### Nomenclatura para las ramas
-Les recomendamos utilizar las siguientes nomenclaturas que son muy comunes:
+Usaremos el nombre del issue y feature que trabajamos para los nombres de las ramas, y todo en minúsculas. Ejemplo:
 
-issue-9/feature
+issue-1/navbar
+
+### Nomenclatura para los nombres de clases
+Usaremos BEM (bloque, elemento, modificador) para darle nombre a nuestras clases: .block__element--modifier. Ejemplos:
+
+menu__item--active
+button--primary
+
+### Nomenclatura para los nombres de clases
+Usaremos el nombre del issue y feature que trabajamos para los nombres de las ramas, y todo en minúsculas. Ejemplos:
+
+issue-1/navbar
+issue-8/card-bodega
+
+### Lenguaje para el código
+Intentaremos utilizar el idioma inglés para todo nuestro código, incluyendo los nombres de carpetas, archivos, componentes, clases, etc.
+Ya los commits, PRs y el code review sí podemos hacerlos en español.
 
 ## Estructura de archivos
 
