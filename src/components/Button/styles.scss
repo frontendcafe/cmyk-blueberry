@@ -1,112 +1,140 @@
 @use 'src/styles/utils' as *;
 
 .button {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: bold;    
-  min-height: auto;
-  width: auto;
-  letter-spacing: 0.05em;
+  // boton azul para navbar y header
 
-  @include media(md){
-    font-size: $font-size-buttom;
-  }
-}
+  &--primary {
+    font-style: normal;
+    font-weight: bold;
+    font-size: $size-sm;
+    letter-spacing: 0.05em;
+    color: $color-bg;
+    background: $color-primary;
+    height: auto;
+    width: auto;
+    border-radius: $rounded-mobile;
+    padding: 7px 14px;
 
-// Botón azul para navbar y header    
-.button-primary {
-  font-size: $size-sm;
-  color: $color-bg;
-  background: $color-primary;
-  border-radius: $rounded-mobile;
-  padding: 7px 14px;
+    @include media(md) {
+      min-height: 60px;
+      font-size: $font-size-buttom;
+      border-radius: $rounded;
+      padding: 5px 16px; }
 
-  @include media(md) {
-    min-height: 60px;
-    border-radius: $rounded;
-    padding: 5px 16px; }
+      &:hover {
+        box-shadow: $shadow;
+      } }
+    
+
+    // boton blanco sin box shadow
+
+    &--secondary {
+      font-family: $raleway;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $size-sm;
+      letter-spacing: 0.05em;
+      background: $color-bg;
+      color: $color-secondary;
+      min-height: auto;
+      width: auto;
+      padding: 7px 14px 7px 14px;
+      border-radius: $rounded-mobile;
+    
+
+    @include media(md) {
+      font-size: $font-size-buttom;
+      padding: 9px 18px 9px 18px;
+      border-radius: $rounded;
+    } }
+
+    //boton blanco con bordes y $rounded (10px) -
+    // No lo encontré en version mobile
+
+    &--light {
+      font-family: $raleway;
+      font-style: normal;
+      font-size: $font-size-buttom;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      background: $color-bg;
+      color: $color-secondary;
+      min-height: auto;
+      width: auto;
+      border-radius: $rounded;
+      padding: 10px 20px 10px 20px;
+      box-shadow: $shadow-lg;
+    
 
     &:hover {
-      box-shadow: $shadow;
-    } 
-}
+      box-shadow: $shadow-lg;
+    } }
 
-// Botón blanco sin box shadow
-.button-secondary {
-  
-  font-size: $size-sm;
-  background: $color-bg;
-  color: $color-secondary;
-  padding: 7px 14px 7px 14px;
-  border-radius: $rounded-mobile;
+    //boton blanco con bordes y $rounded-lg (20px)
+    // No lo encontré en version mobile
+    // No lo volvi a encontrar en figma asi que creo que dejo de existir
 
+    &--light-lg {
+      font-family: $raleway;
+      font-style: normal;
+      font-size: $font-size-buttom;
+      font-weight: 700;
+      background: $color-bg;
+      color: $color-secondary;
+      min-height: auto;
+      width: auto;
+      border-radius: $rounded-lg;
+      padding: 10px 20px 10px 20px;
+      box-shadow: $shadow-lg;
+    }
 
-@include media(md) {
-  padding: 9px 18px 9px 18px;
-  border-radius: $rounded;
-} }
+    //boton con fondo blanco con bordes azules
 
-//Botón blanco con bordes y $rounded (10px) -
-// No lo encontré en version mobile
-.button-light {
-    font-size: $font-size-buttom;
-    font-weight: 700;
-    line-height: 30px;
-    background: $color-bg;
-    color: $color-secondary;
-    border-radius: $rounded;
-    padding: 10px 20px 10px 20px;
-    box-shadow: $shadow-lg;
-  
+    &--blueborder {
+      font-family: $raleway;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $base-size;
+      letter-spacing: 0.05em;
+      background: $color-bg;
+      color: $color-primary;
+      min-height: auto;
+      width: auto;
+      padding: 6px 12px;
+      border-radius: $rounded-mobile;
+      border: 2px solid $color-primary;
+      box-sizing: border-box;
 
-  &:hover {
-    box-shadow: $shadow-lg;
-  } 
-}
+      @include media(md) {
+        font-size: $font-size-buttom;
+        padding: 10px 20px;
+        border-radius: $rounded;
+      }
+    }
 
-//Boton blanco con bordes y $rounded-lg (20px)
-//No lo encontré en version mobile
-//No lo volvi a encontrar en figma asi que creo que dejo de existir
-.button-light-lg {
-  font-size: $font-size-buttom;
-  font-weight: 700;
-  background: $color-bg;
-  color: $color-secondary;
-  border-radius: $rounded-lg;
-  padding: 10px 20px 10px 20px;
-  box-shadow: $shadow-lg;
-}
+    //boton fondo blanco con bordes verdes
 
-//Botón con fondo blanco con bordes azules
-.button-blueborder {
-  font-size: $base-size;
-  background: $color-bg;
-  color: $color-primary;
-  padding: 6px 12px;
-  border-radius: $rounded-mobile;
-  border: 2px solid $color-primary;
-  box-sizing: border-box;
+    &--greenborder {
+      font-family: $raleway;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      background: $color-bg;
+      color: $color-secondary;
+      min-height: auto;
+      width: auto;
+      padding: 6px 12px;
+      border-radius: $rounded-mobile;
+      border: 2px solid $color-secondary;
+      box-sizing: border-box;
+    
 
-  @include media(md) {
-    padding: 10px 20px;
-    border-radius: $rounded;
+    @include media(md) {
+      font-size: $font-size-buttom;
+      padding: 10px 20px;
+      border-radius: $rounded;
+    }
   }
-}
-
-//boton fondo blanco con bordes verdes
-
-.button-greenborder {
-  font-size: 16px;
-  background: $color-bg;
-  color: $color-secondary;
-  padding: 6px 12px;
-  border-radius: $rounded-mobile;
-  border: 2px solid $color-secondary;
-  box-sizing: border-box;
-
-
-@include media(md) {
-  padding: 10px 20px;
-  border-radius: $rounded;
-}
 }
