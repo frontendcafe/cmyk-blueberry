@@ -64,20 +64,6 @@
     }
   }
 
-  //boton blanco con bordes y $rounded-lg (20px)
-  // No lo encontré en version mobile
-  // No lo volvi a encontrar en figma asi que creo que dejo de existir
-
-  &--light-lg {
-    font-size: $font-size-buttom;
-    font-weight: 700;
-    background: $color-bg;
-    color: $color-secondary;
-    border-radius: $rounded-lg;
-    padding: 10px 20px 10px 20px;
-    box-shadow: $shadow-lg;
-  }
-
   //boton con fondo blanco con bordes azules
 
   &--blueborder {
