@@ -23,7 +23,7 @@
             display: none;
         }
     
-        &-icon {
+        &--icon {
             position: relative;
             z-index: 2;
             width: 16px;
@@ -31,17 +31,14 @@
     }
 
     &__logo {
-        @include media(md) {
-            margin-left: 1rem;
-        }
 
-        &-link {
+        &--link {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        &-img {
+        &--img {
             max-width: 100px;
             width: 50%;
             @include media(md) {
@@ -69,6 +66,13 @@
             justify-content: center;
             align-items: center;
         }
+
+        &--active {
+            left: 0;
+            top: 0px;
+            opacity: 1;
+            z-index: 1;   
+        }
     
         ul {
             margin-top: 60px;
@@ -78,7 +82,7 @@
             }
         }
     
-        &-item {
+        &--item {
             display: flex;
             align-items: center;
             margin: 1rem;
@@ -87,6 +91,9 @@
                 text-decoration: none;
                 color: $color-secondary;
                 padding: 0px 5px;
+                @include media(md) {
+                    font-size: 20px;
+                }
             }
             a:hover {
                 text-decoration: underline $color-secondary;
@@ -95,34 +102,20 @@
         }
     }
 
-    &__menu.active {
-        left: 0;
-        top: 0px;
-        opacity: 1;
-        z-index: 1;   
-    }
-
-    &__button {
+    &__contact {
         display: none;
         @include media(md) {
-            display: inline;
-            background-color: $color-primary;
-            border-radius: 10px;
-            width: 185px;
-            height: 60px;
-            justify-content: center;
-            align-content: center;
-            margin-left: 0;
-            margin-right: 16px;
-            &-link {
-                color: $color-bg;
-                font-size: $size-md;
-            }
+            display: initial;
+            margin-right: $size-base;
         }
-    }
 
-    &__button:hover {
-        box-shadow: $shadow;
+        &--btn {
+            @include media(md) {
+                width: 185px;
+                font-size: 20px
+            }
+            
+        }
     }
 
     &__search {
