@@ -1,0 +1,68 @@
+@use 'src/styles/utils' as *;
+
+.gallery {
+    
+    &__title {
+        font-size: $size-5xl;
+        color: $color-secondary;
+        font-weight: bold;
+        margin: $size-base;
+    }
+
+    &__grid {
+        display: flex;
+        
+
+        &__center {
+            display: none;
+        }
+
+        img {
+            margin: $size-base;
+        }
+    }
+
+    @include media(md) {
+        display: grid;
+        place-content: center;
+        
+        &__grid {
+            max-width: 1200px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: "top1 top2 top3"
+                                "center center center"
+                                "btm1 btm2 btm3";
+
+            &__image--1{grid-area:top1;}
+            &__image--2{grid-area:top2;}
+            &__image--3{grid-area:top3;}
+            &__image--4{grid-area:btm1;}
+            &__image--5{grid-area:btm2;}
+            &__image--6{grid-area:btm3;}
+            &__center {
+                display: block;
+                grid-area:center;
+            }
+
+            .img--square{
+                max-width: 100%;
+                height: auto;
+            }
+
+            img {
+                margin: 0;
+            }
+        }
+
+        img:hover {
+            animation: darken .5s ease-in-out .1s;
+            animation-fill-mode: forwards;  
+        }
+
+        @keyframes darken {
+            from {filter:grayscale(1) brightness(100%);}
+            to {filter:grayscale(1) brightness(80%);}
+        }
+    }
+}
