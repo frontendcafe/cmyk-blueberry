@@ -1,0 +1,134 @@
+@use 'src/styles/utils' as *;
+
+.navbar {
+    background: $color-bg;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 99;
+
+    @include media(md) {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        height: 100px;
+        filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.25));
+    }
+
+    &__mobile {
+        padding-left: 20px;
+        @include media(md) {
+            display: none;
+        }
+    
+        &-icon {
+            position: relative;
+            z-index: 2;
+            width: 16px;
+        }
+    }
+
+    &__logo {
+
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-img {
+            max-width: 100px;
+            width: 50%;
+            @include media(md) {
+                width: 100%;
+            }
+        }  
+    }
+
+    &__menu {
+        background: $color-bg;
+        width: 100%;
+        height: 375px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: -100%;
+        top: 0px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        list-style-type: none;
+        @include media(md) {
+            opacity: 1;
+            height: 100px;
+            position: static;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--active {
+            left: 0;
+            top: 0px;
+            opacity: 1;
+            z-index: 1;   
+        }
+    
+        ul {
+            margin-top: 60px;
+            @include media(md) {
+                display: flex;
+                margin-top: 0;
+            }
+        }
+    
+        &-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem;
+            a {
+                font-size: $size-md;
+                text-decoration: none;
+                color: $color-secondary;
+                padding: 0px 5px;
+                @include media(md) {
+                    font-size: 20px;
+                }
+            }
+            a:hover {
+                text-decoration: underline $color-secondary;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__contact {
+        display: none;
+        @include media(md) {
+            display: initial;
+            margin-right: $size-base;
+        }
+
+        &-btn {
+            @include media(md) {
+                width: 185px;
+                font-size: 20px;      }
+            
+        }
+    }
+
+    &__search {
+        padding-right: 20px;
+        @include media(md) {
+            display: none;
+        }
+    }
+}
+
+.hidden {
+    @include media(md) {
+        display: none;
+    }
+}
