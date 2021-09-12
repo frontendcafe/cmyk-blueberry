@@ -17,6 +17,11 @@
             display: none;
         }
 
+        .img--square{
+            max-width: 400px;
+            height: auto;
+        }
+
         img {
             margin: $size-base;
         }
