@@ -22,4 +22,5 @@ const Sucursales = () => {
   );
 };
 
+
 export default Sucursales;
