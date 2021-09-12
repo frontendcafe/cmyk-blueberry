@@ -1,25 +1,25 @@
 import "./styles.scss";
-import CardStore from "../../components/CardStore/index"
+import CardStore from "../../components/CardStore/index";
+import { cards } from "./data";
 
 const Sucursales = () => {
-
-    return(
-        <div id="sucursales-div">
-            <h1 className="title">NUESTRAS SUCURSALES</h1>
-            <div id="cards">
-                <CardStore variant="color" title="Bodega wineberry
-                -Mendoza-" body="Ozamis Norte 375 · General Gutiérrez ·
-                M5511APG · Maipú · Mendoza
-                +54 9 261 5948023
-                infomendoza@bodegaswineberry.com.ar"></CardStore>
-                <CardStore variant="transparent" title="Bodega wineberry
-                -Buenos Aires-" body="Godoy Cruz 2025 · C1414CYP ·
-                Capital Federal · Buenos Aires
-                +54 9 11 26062011
-                infobsas@bodegaswineberry.com.ar"></CardStore>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div id="sucursales">
+      <h1 id="sucursales__title">NUESTRAS SUCURSALES</h1>
+      <div id="sucursales__cards">
+        <CardStore
+          variant="transparent"
+          title={cards[0].title}
+          body={cards[0].description}
+        ></CardStore>
+        <CardStore
+          variant="color"
+          title={cards[1].title}
+          body={cards[1].description}
+        ></CardStore>
+      </div>
+    </div>
+  );
+};
 
 export default Sucursales;
