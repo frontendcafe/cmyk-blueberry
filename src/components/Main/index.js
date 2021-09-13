@@ -1,34 +1,35 @@
 import React from 'react';
 import "./style.scss";
 import imagen from '../../assets/imagen-portada-2.png';
+import Button from '../Button';
 
 
 function Main() {
         return ( 
-            <div className = "container">
-                <div className="texto">
+            <main className = "main">
+                <div className="main__texto">
                     <h1>
-                       <span className = "texto-simple">
+                       <span className = "main__texto--simple">
                             <span>
                                 Tu imaginación<br/>
                             </span>
-                            <span className = "texto__alineado__derecha">
+                            <span className = "main__texto--alineado-derecha">
                                no tiene limites,<br/>
                             </span>
                         </span> 
-                        <span className = "texto__cursiva">
+                        <span className = "main__texto--texto-cursiva">
                          la nuestra tampoco... <br/>
                         </span>
                     </h1>
-                    <button>
-                        <a href="#">Más información</a>
-                    </button>
+                        <a href="#">
+                            <Button variant="primary" text="Conocé lo nuevo"></Button>
+                        </a>
                 </div>
-                <div className = "img-container">
-                    <img src={imagen} className = "img__circular" alt="imagen de una copa de vino"/>
-                    <img src={imagen} className = "img__rectangular" alt="imagen de una copa de vino"/>
+                <div className = "main__img-container">
+                    <img src={imagen} className = "main__img--circular" alt="imagen de una copa de vino"/>
+                    <img src={imagen} className = "main__img--rectangular" alt="imagen de una copa de vino"/>
                 </div>
-            </div> );
+            </main> );
 }
  
 export default Main;

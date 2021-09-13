@@ -1,7 +1,7 @@
 @use 'src/styles/utils' as *;
 @import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
 
-.container {
+.main {
   max-height: 100vh;
   width: 100vw;
   position: relative;
@@ -13,18 +13,18 @@
     margin-left: 7vw;
     top: 70vh;
   }
-  .texto-simple {
+  .main__texto--simple {
     font-size: $size-2xl;
     letter-spacing: 0.05em;
     line-height: 150%;
     font-weight: 800;
     height: 72px;
-    .texto__alineado__derecha {
+    .main__texto--alineado-derecha {
       height: $size-5xl !important;
       margin-left: 35vw;
     }
   }
-  .texto__cursiva {
+  .main__texto--texto-cursiva {
     font-size: 39px;
     font-family: "Yesteryear";
     font-weight: normal;
@@ -43,7 +43,7 @@
     margin-left: 30vw;
     top: 93vh;
   }
-  .img-container {
+  .main__img-container {
     position: absolute;
     background: linear-gradient(
         180deg,
@@ -57,17 +57,17 @@
     background-position: center;
 
     z-index: 1;
-    .img__circular {
+    .main__img--circular {
       visibility: hidden;
     }
-    .img__rectangular {
+    .main__img--rectangular {
       visibility: hidden;
     }
   }
 }
 
 @media (min-width: 1024px) {
-  .container {
+  .main {
     background-color: $color-bg;
     width: 100vw;
     min-height: 92.2vh;
@@ -76,19 +76,19 @@
     position: relative;
     display: flex;
     align-content: space-between;
-    .texto {
+    .main__texto {
       width: 50%;
     }
-    .texto-simple {
+    .main__texto--simple {
       font-size: 44px;
       letter-spacing: 0.05em;
       line-height: 150%;
       font-weight: 500;
-      .texto__alineado__derecha {
+      .main__texto--alineado-derecha {
         margin-left: 180px;
       }
     }
-    .texto__cursiva {
+    .main__texto--texto-cursiva {
       font-size: 66px;
       font-family: "Yesteryear";
       font-weight: normal;
@@ -110,7 +110,10 @@
       margin-left: $size-base;
       top: auto;
     }
-    .img-container {
+    button::after {
+      content: "Más información";
+    }
+    .main__img-container {
       overflow: hidden;
       height: 92.2vh;
       width: 50%;
@@ -118,7 +121,7 @@
       background: none;
       display: block;
       float: right;
-      .img__circular {
+      .main__img--circular {
         position: absolute;
         clip-path: inset(0px 0px round 50%);
         height: 100%;
@@ -126,7 +129,7 @@
         z-index: 1;
         visibility: visible;
       }
-      .img__rectangular {
+      .main__img--rectangular {
         clip-path: inset(0 0 0 50%);
         height: 100%;
         width: 100%;
