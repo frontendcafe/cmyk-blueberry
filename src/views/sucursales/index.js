@@ -12,6 +12,7 @@ const Sucursales = () => {
         variant={index % 2 === 0 ? "transparent" : "color"}
         title={card.title}
         body={card.description}
+        key={index}
         ></CardStore>
         )}
       </div>
