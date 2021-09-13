@@ -1,7 +1,7 @@
 @use 'src/styles/utils' as *;
 
 .detail {
-    margin: 20px 20px 10px 20px;
+    margin: 20px 20px 10px 25px;
     display: grid; 
     grid-template-columns: 0.3fr 1.7fr;
     grid-template-areas:"img first"
@@ -9,12 +9,29 @@
                         "third third"
                         "fourth fourth"
                         "fifth fifth";
+    @include media(md) {
+        margin: 92px 93px 33px;
+        background-color: $color-primary;
+        border-radius: 9px;
+        grid-template-columns: 0.5fr 1.5fr; 
+        grid-template-areas: 
+                            "img first"
+                            "img second"
+                            "img third"
+                            "img fourth"
+                            "fifth fifth";
+    }
     
     &__img {
         grid-area: img;
-        max-width: 190px;
+        max-width: 175px;
+        @include media(md) {
+            margin-left: 10px;
+        }
+
         img {
             max-width: 100%;
+            
         }
     }
 
@@ -23,18 +40,27 @@
         flex-direction: column;
         margin-top: 10px;
 
-        &-title--primary {
+        &-title {
             font-size: $size-base;
             font-weight: 700;
             letter-spacing: 0.05em;
-            color: $color-primary;
-        }
+            @include media(md) {
+                font-size: 18px;
+            }
+            
+            &--primary {
+                color: $color-primary;
+                @include media(md) {
+                    color: $color-bg;
+                }
+            }
 
-        &-title--secondary {
-            font-size: $size-base;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            color: $color-secondary;
+            &--secondary { 
+                color: $color-secondary;
+                @include media(md) {
+                    color: $color-bg;
+                }
+            }
         }
 
         &-text {
@@ -44,6 +70,12 @@
             letter-spacing: 0.05em;
             color: $color-text;
             margin-top: 10px;
+            @include media(md) {
+                font-size: 20px;
+                line-height: 150%;
+                font-weight: 400;
+                color: $color-bg;
+            }
         }
 
         &-item {
@@ -77,18 +109,25 @@
         }
 
         &-button {
-            font-size: 16px;
+            font-size: 14px;
+            font-family: Raleway;
+            font-weight: 700;
+            line-height: 22px;
             background: $color-bg;
             color: $color-secondary;
             padding: 6px 12px;
             border: 2px solid $color-secondary;
-            align-self: center;
             border-radius: 7px;
+            align-self: flex-end;
+            background-color: transparent;
         }
 
-        &-img {
-
+        &-img{
+            @include media(md) {
+                display: none;
+            }
         }
+
     }
 }
 
@@ -96,23 +135,41 @@
     grid-area: first;
     margin-left: 8px;
     margin-right: 8px;
+    @include media(md) {
+        margin-top: 40px;
+    }
 }
 
 .second {
     grid-area: second ;
+    @include media(md) {
+        margin-left: 8px;
+    margin-right: 8px;
+    }
 }
 
 .third {
     grid-area: third;
+    @include media(md) {
+        margin-left: 8px;
+    margin-right: 8px;
+    }
 }
 
 .fourth {
     grid-area: fourth;
     margin-top: 15px;
+    @include media(md) {
+        margin-left: 8px;
+    margin-right: 8px;
+    }
 }
 
 .fifth {
     grid-area: fifth;
     flex-direction: row;
     justify-content: space-between;
+    @include media(md) {
+        background-color: $color-bg;
+    }
 }
