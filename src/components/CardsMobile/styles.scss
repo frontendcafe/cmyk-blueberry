@@ -1,15 +1,14 @@
 @use 'src/styles/utils' as *;
 
-.card-container {
+.card-mobile {
     max-width: 330px;
     border-radius: $rounded;
     background-color: $color-bg;
     box-shadow: $shadow;
     font-size: 10px;
     overflow: hidden;
-    margin: 15px;
 
-    .card-title {
+    &__title {
         grid-area: top;
         width: 100%;
         display: flex;
@@ -17,7 +16,7 @@
         height: 3.5em;
         padding: $size-sm;
 
-        &-left {
+        &--left {
             width:90%;
             display: flex;
             align-items: center;
@@ -34,7 +33,7 @@
         }
     }
 
-    .card-image {
+    &__image {
         grid-area: img;
         display: inline-block;
 
@@ -43,7 +42,7 @@
         }
     }
 
-    .card-description {
+    &__description {
         grid-area: desc;
         padding: $size-sm;
     }
