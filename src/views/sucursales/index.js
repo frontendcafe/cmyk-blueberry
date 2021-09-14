@@ -13,7 +13,7 @@ const Sucursales = () => {
         title={card.title}
         body={card.description}
         key={index}
-        ></CardStore>
+        />
         )}
       </div>
     </div>
