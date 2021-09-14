@@ -45,11 +45,6 @@
   }
   button {
     z-index: 2;
-    background-color: $color-primary;
-    border-radius: 7.23px;
-    padding: 10px 20px;
-    color: $color-bg;
-    font-size: $size-sm;
     margin-left: 25vw;
     top: 82vh;
   }
@@ -95,11 +90,7 @@
       position: static;
     }
     button {
-      background-color: $color-primary;
-      border-radius: $rounded;
       padding: 10px 20px;
-      color: $color-bg;
-      font-size: $size-lg;
       margin-left: $size-base;
       top: auto;
     }
