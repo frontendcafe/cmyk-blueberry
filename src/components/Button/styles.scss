@@ -1,10 +1,98 @@
 @use 'src/styles/utils' as *;
 
 .button {
-  color: $color-bg;
-  background: $color-primary;
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  height: auto;
+  width: auto;
 
-  @include media(lg) {
-    background: green;
+  @include media(md) {
+    font-size: $font-size-buttom;
+    border-radius: $rounded;
+    font-size: $font-size-buttom;
+  }
+
+  // boton azul para navbar y header
+  &--primary {
+    font-size: $size-sm;
+    color: $color-bg;
+    background: $color-primary;
+    border-radius: $rounded-mobile;
+    padding: 7px 14px;
+
+    @include media(md) {
+      min-height: 60px;
+      padding: 5px 16px;
+    }
+
+    &:hover {
+      box-shadow: $shadow;
+    }
+  }
+
+  // boton blanco sin box shadow
+
+  &--secondary {
+    font-size: $size-sm;
+    background: $color-bg;
+    color: $color-secondary;
+    padding: 7px 14px 7px 14px;
+    border-radius: $rounded-mobile;
+
+    @include media(md) {
+      padding: 9px 18px 9px 18px;
+    }
+  }
+
+  //boton blanco con bordes y $rounded (10px) -
+  // No lo encontré en version mobile
+
+  &--light {
+    font-size: $font-size-buttom;
+    font-weight: 700;
+    line-height: 30px;
+    background: $color-bg;
+    color: $color-secondary;
+    border-radius: $rounded;
+    padding: 10px 20px 10px 20px;
+    box-shadow: $shadow-lg;
+
+    &:hover {
+      box-shadow: $shadow-lg;
+    }
+  }
+
+  //boton con fondo blanco con bordes azules
+
+  &--blueborder {
+    font-size: $base-size;
+    background: $color-bg;
+    color: $color-primary;
+    padding: 6px 12px;
+    border-radius: $rounded-mobile;
+    border: 2px solid $color-primary;
+    box-sizing: border-box;
+
+    @include media(md) {
+      padding: 10px 20px;
+    }
+  }
+
+  //boton fondo blanco con bordes verdes
+
+  &--greenborder {
+    font-size: 16px;
+    background: $color-bg;
+    color: $color-secondary;
+    padding: 6px 12px;
+    border-radius: $rounded-mobile;
+    border: 2px solid $color-secondary;
+    box-sizing: border-box;
+
+    @include media(md) {
+      padding: 10px 20px;
+    }
   }
 }

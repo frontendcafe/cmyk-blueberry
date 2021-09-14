@@ -1,11 +1,12 @@
-import './styles.scss';
+import "./styles.scss";
 
-function Button() {
+export const Button = (props) => {
   return (
-    <button className="button">
-      Botón de prueba
+    <button
+      className={`button button--${props.variant} ${props.clases}`} >
+      {props.text}
     </button>
   );
-}
+};
 
 export default Button;

@@ -3,8 +3,8 @@ $base-size: 16px;
 $base-leading: 1.2;
 
 /* Fonts */
-$raleway: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Helvetica, Arial, sans-serif;
+$raleway: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-size-buttom: 20px;
 
 /* Colors */
 $color-primary: #4f84f9;
@@ -27,6 +27,7 @@ $size-4xl: 1.875rem; // 30px
 $size-5xl: 2.25rem; // 36px
 
 /* Rounded */
+$rounded-mobile: 8px;
 $rounded: 10px;
 $rounded-lg: 20px;
 $rounded-full: 50%;
