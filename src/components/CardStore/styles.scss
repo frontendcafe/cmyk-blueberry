@@ -24,26 +24,26 @@
     box-shadow: $shadow-lg;
     border-radius: $rounded;
   }
-}
 
-.card__container {
-  display: flex;
-  width: 340px;
-  height: 321px;
-
-  @include media(md) {
-    width: 455px;
-    height: 644px;
-    padding-left: 3rem;
-    padding-right: 3rem;
+  &__container {
+    display: flex;
+    width: 340px;
+    height: 321px;
+  
+    @include media(md) {
+      width: 455px;
+      height: 644px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
   }
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
 }
 
 .vector {
@@ -62,15 +62,17 @@
   &--transparent {
     margin-bottom: 3rem;
   }
+
+  &__element {
+    position: absolute;
+  }
+
+  &__heart {
+    position: absolute;
+    margin-top: 0.3rem;
+  }
 }
 
-.vector__element {
-  position: absolute;
-}
-.vector__heart {
-  position: absolute;
-  margin-top: 0.3rem;
-}
 
 .title {
   padding-left: 2rem;
@@ -84,23 +86,23 @@
   &--color {
     color: $color-bg;
   }
-}
 
-/* H3 */
-.title__text {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 150%;
-  font-size: $base-size !important;
-
-  @include media(md) {
-    font-size: $size-3xl !important;
+  &__text {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    font-size: $base-size !important;
+  
+    @include media(md) {
+      font-size: $size-3xl !important;
+    }
+    /* or 42px */
+    text-align: center;
+    letter-spacing: 0.05em;
   }
-  /* or 42px */
-  text-align: center;
-  letter-spacing: 0.05em;
 }
+
 
 .body {
   padding-left: 2rem;
@@ -114,22 +116,22 @@
   &--color {
     color: $color-bg;
   }
-}
 
-/* Parrafo */
-.body__text {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: normal;
-  font-size: $size-sm;
-  line-height: 150%;
-
-  /* or 30px */
-  text-align: center;
-  letter-spacing: 0.05em;
+  &__text {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $size-sm;
+    line-height: 150%;
   
-  @include media(md) {
-    font-size: $size-lg;
+    /* or 30px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    @include media(md) {
+      font-size: $size-lg;
+    }
   }
-
 }
+
+
