@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
 
 .card {
-  .transparent-card {
+  margin-bottom: 1rem;
+  &--transparent {
     /* primario */
     border: 3px solid $color-primary;
     box-sizing: border-box;
@@ -11,7 +12,7 @@
     filter: drop-shadow($shadow-lg);
     border-radius: $rounded;
   }
-  .color-card {
+  &--color {
     /* primario */
     background: $color-primary;
 
@@ -23,29 +24,29 @@
     box-shadow: $shadow-lg;
     border-radius: $rounded;
   }
-}
 
-.rectangle {
-  display: flex;
-  width: 340px;
-  height: 321px;
-
-  @include media(md) {
-    width: 455px;
-    height: 644px;
-    padding-left: 3rem;
-    padding-right: 3rem;
+  &__container {
+    display: flex;
+    width: 340px;
+    height: 321px;
+  
+    @include media(md) {
+      width: 455px;
+      height: 644px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
   }
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
 }
 
-.div-vector {
+.vector {
   height: 10%;
   width: 10%;
   margin-top: 5rem;
@@ -58,75 +59,79 @@
     margin-bottom: 0.1rem; 
   }
 
-  .transparent {
+  &--transparent {
     margin-bottom: 3rem;
+  }
+
+  &__element {
+    position: absolute;
+  }
+
+  &__heart {
+    position: absolute;
+    margin-top: 0.3rem;
   }
 }
 
-.vector {
-  position: absolute;
-}
-.heart-vector {
-  position: absolute;
-  margin-top: 0.3rem;
-}
 
-.title-div {
+.title {
   padding-left: 2rem;
   padding-right: 2rem;
   margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
 
-  .transparent {
+  &--transparent {
     color: $color-primary;
   }
-  .color {
+  &--color {
     color: $color-bg;
   }
-}
 
-/* H3 */
-.h3 {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 150%;
-  font-size: $base-size !important;
-
-  @include media(md) {
-    font-size: $size-3xl !important;
+  &__text {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    font-size: $base-size !important;
+  
+    @include media(md) {
+      font-size: $size-3xl !important;
+    }
+    /* or 42px */
+    text-align: center;
+    letter-spacing: 0.05em;
   }
-  /* or 42px */
-  text-align: center;
-  letter-spacing: 0.05em;
 }
 
-.body-div {
+
+.body {
   padding-left: 2rem;
   padding-right: 2rem;
 
-  @include media(md) {
-    font-size: $size-lg;
-  }
-
-  .transparent {
+  &--transparent {
     /* secundario */
     color: $color-secondary;
   }
 
-  .color {
+  &--color {
     color: $color-bg;
+  }
+
+  &__text {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $size-sm;
+    line-height: 150%;
+  
+    /* or 30px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    @include media(md) {
+      font-size: $size-lg;
+    }
   }
 }
 
-/* Parrafo */
-p {
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: normal;
-  font-size: $size-sm;
-  line-height: 150%;
 
-  /* or 30px */
-  text-align: center;
-  letter-spacing: 0.05em;
-}
