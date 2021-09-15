@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import imagen from "../../assets/imagen-portada-2.png";
+import imagen from "../../assets/imagen-portada--2.png";
 import Button from "../Button";
 
 function Main() {
@@ -13,12 +13,12 @@ function Main() {
               Tu imaginación
               <br />
             </span>
-            <span className="main__texto--alineado-derecha">
+            <span className="main__texto--derecha">
               no tiene limites,
               <br />
             </span>
           </span>
-          <span className="main__texto--texto-cursiva">
+          <span className="main__texto--cursiva">
             la nuestra tampoco... <br />
           </span>
         </h1>
@@ -26,7 +26,7 @@ function Main() {
           <Button variant="primary" text="Conocé lo nuevo"></Button>
         </a>
       </div>
-      <div className="main__img-container">
+      <div className="main__img">
         <img
           src={imagen}
           className="main__img--circular"

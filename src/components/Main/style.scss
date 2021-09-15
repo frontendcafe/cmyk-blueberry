@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
 
 .main {
-  max-height: 100vh;
+  top: 35px;
+  height: 100vh;
   width: 100vw;
   font-family: $raleway;
   background: linear-gradient(
@@ -24,31 +25,39 @@
     z-index: 2;
     margin-left: 7vw;
   }
-  .main__texto--simple {
-    font-size: $size-2xl;
-    letter-spacing: 0.05em;
-    line-height: 150%;
-    font-weight: 800;
-    height: 72px;
-    .main__texto--alineado-derecha {
+
+  &__texto {
+    &--simple {
+      font-size: $size-2xl;
+      letter-spacing: 0.05em;
+      line-height: 150%;
+      font-weight: 800;
+      height: 72px;
+    }
+    &--derecha {
       height: $size-5xl !important;
       margin-left: 35vw;
     }
+    &--cursiva {
+      font-size: 39px;
+      font-family: "Yesteryear";
+      font-weight: normal;
+      top: 100px;
+      letter-spacing: 0.05em;
+      height: 58px;
+    }
+
+    a {
+      button {
+        z-index: 2;
+        margin-left: 25vw;
+        top: 82vh;
+      }
+    }
   }
-  .main__texto--texto-cursiva {
-    font-size: 39px;
-    font-family: "Yesteryear";
-    font-weight: normal;
-    top: 100px;
-    letter-spacing: 0.05em;
-    height: 58px;
-  }
-  button {
-    z-index: 2;
-    margin-left: 25vw;
-    top: 82vh;
-  }
-  .main__img-container {
+  
+  
+  &__img {
     display: none;
   }
 }
@@ -57,60 +66,70 @@
     background-color: $color-bg;
     background-image: none;
     flex-direction: row;
-    width: 100vw;
-    min-height: 92.2vh;
+    max-width: 100%;
+    height: 90vh;
     color: $color-secondary;
     font-family: $raleway;
     position: relative;
     display: flex;
     align-content: space-between;
     margin-top: 65px;
-    .main__texto {
+
+    &__texto {
       width: 50%;
-    }
-    .main__texto--simple {
-      font-size: 44px;
-      letter-spacing: 0.05em;
-      line-height: 150%;
-      font-weight: 500;
-      .main__texto--alineado-derecha {
+
+      &--simple {
+        font-size: 44px;
+        letter-spacing: 0.05em;
+        line-height: 150%;
+        font-weight: 500;
+      }
+
+      &--derecha {
         margin-left: 180px;
       }
+
+      &--cursiva {
+        font-size: 66px;
+        font-family: "Yesteryear";
+        font-weight: normal;
+        padding: $size-base;
+        top: 132px;
+        letter-spacing: 0.05em;
+      }
     }
-    .main__texto--texto-cursiva {
-      font-size: 66px;
-      font-family: "Yesteryear";
-      font-weight: normal;
-      padding: $size-base;
-      top: 132px;
-      letter-spacing: 0.05em;
-    }
+  
     h1 {
       margin-left: $size-base;
       position: static;
     }
+
     button {
       padding: 10px 20px;
       margin-left: $size-base;
       top: auto;
     }
-    .main__img-container {
+
+    &__img {
       overflow: hidden;
-      height: 92.2vh;
+      height: 100%;
       width: 50%;
       position: relative;
       background: none;
       display: block;
       float: right;
-      .main__img--circular {
-        position: absolute;
-        clip-path: inset(0px 0px round 50%);
+
+      &--circular {
         height: 100%;
         width: 100%;
+        position: absolute;
         z-index: 1;
         visibility: visible;
+        border-radius: 50% 0 0 50%;
+        object-fit: cover;
       }
-      .main__img--rectangular {
+
+      &--rectangular {
         clip-path: inset(0 0 0 50%);
         height: 100%;
         width: 100%;
