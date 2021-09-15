@@ -57,7 +57,7 @@
 
             img {
                 margin: 0;
-                filter:grayscale(1) brightness(100%);
+                filter: brightness(50%);
             }
         }
 
@@ -67,8 +67,8 @@
         }
 
         @keyframes darken {
-            from {filter:grayscale(1) brightness(100%);}
-            to {filter:grayscale(0) brightness(100%);}
+            from {filter: brightness(50%);}
+            to {filter: brightness(100%);}
         }
     }
 }
