@@ -13,7 +13,7 @@
         display: flex;
         
 
-        &__center {
+        .gallery__center {
             display: none;
         }
 
@@ -39,15 +39,28 @@
                                 "center center center"
                                 "btm1 btm2 btm3";
 
-            &__image--1{grid-area:top1;}
-            &__image--2{grid-area:top2;}
-            &__image--3{grid-area:top3;}
-            &__image--4{grid-area:btm1;}
-            &__image--5{grid-area:btm2;}
-            &__image--6{grid-area:btm3;}
-            &__center {
+            .gallery__center {
                 display: block;
-                grid-area:center;
+                grid-area: center;
+            }
+
+            img[grid-area="top1"] {
+                grid-area: top1;
+            }
+            img[grid-area="top2"] {
+                grid-area: top2;
+            }
+            img[grid-area="top3"] {
+                grid-area: top3;
+            }
+            img[grid-area="btm1"] {
+                grid-area: btm1;
+            }
+            img[grid-area="btm2"] {
+                grid-area: btm2;
+            }
+            img[grid-area="btm3"] {
+                grid-area: btm3;
             }
 
             .img--square{
