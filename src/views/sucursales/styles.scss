@@ -1,0 +1,55 @@
+@use 'src/styles/utils' as *;
+
+#sucursales {
+  background-color: $color-bg;
+  height: 100%;
+  width: 100%;
+  background: url("../../assets/sucursalesBackground.jpg") no-repeat;
+  background-position: 0% 10%;
+  background-size: 100% 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  @include media(md) {
+    background-position: top;
+    background-size: 100% 40%;
+    margin-top: 100px;
+  }
+
+  @include media(lg){
+    background-size: 100% 40%;
+  }
+
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    @include media(lg) {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  &__title {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    margin-top: 1rem;
+    font-size: $base-size;
+    color: $color-primary;
+
+    @include media(md) {
+      font-size: $size-5xl;
+      color: $color-secondary;
+    }
+  }
+}
