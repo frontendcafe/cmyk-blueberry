@@ -2,8 +2,6 @@ import wineMattwe from '../../assets/wine-mattwe.png';
 import wineNisoma from '../../assets/wine-nisoma.png';
 import wineRedwine from '../../assets/wine-redwine.png'
 
-
-
 export const wines = [
     {
         "title": "MATTWE - Since 2010",

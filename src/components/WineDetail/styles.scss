@@ -3,7 +3,7 @@
 .detail {
     margin: 70px 20px 10px 25px;
     display: grid; 
-    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-areas:"img first"
                         "second second"
                         "third third"
@@ -41,22 +41,27 @@
 
     &__img {
         grid-area: img;
-        max-width: 175px;
+        width: 46px;
         margin-top: 5px;
+        display: flex;
+        position: relative;
         @include media(md) {
             margin-left: 10px;
+            width: 190px;
         }
 
         img {
             max-width: 100%;
-            
+            @include media(md) {
+                position: absolute;
+            }  
         }
     }
 
     &__section {
         display: flex;
         flex-direction: column;
-        margin-top: 5px;
+        margin-top: 10px;
 
         &--first {
             grid-area: first;
@@ -72,14 +77,16 @@
             @include media(md) {
                 margin-left: 8px;
                 margin-right: 8px;
+                margin-top: 40px;
             }
         }
 
         &--third {
             grid-area: third;
             @include media(md) {
-                margin-left: 8px;
+                margin-left: 65px;
                 margin-right: 8px;
+                margin-top: 25px;
             }
         }
 
@@ -87,9 +94,9 @@
             grid-area: fourth;
             margin-top: 15px;
             @include media(md) {
-                margin-left: 8px;
+                margin-left: 65px;
                 margin-right: 8px;
-                
+                margin-bottom: 20px;
             }
         }
 
@@ -145,6 +152,24 @@
         &-item {
             display: flex;
             margin-top: 10px;
+
+            .icon {
+                &--mobile {
+                    align-self: flex-start;
+                    margin-top: 4px;
+                    @include media(md) {
+                        display: none;
+                    }
+                }
+                
+                &--desktop {
+                    display: none;
+                    @include media(md) {
+                        align-self: flex-start;
+                        display: inline;
+                    }
+                }
+            }
 
             h3 {
                 align-self: flex-start;
@@ -212,18 +237,3 @@
     }
 }
 
-.icon--mobile {
-    align-self: flex-start;
-    margin-top: 4px;
-    @include media(md) {
-        display: none;
-    }
-}
-
-.icon--desktop {
-    display: none;
-    @include media(md) {
-        align-self: flex-start;
-        display: inline;
-    }
-}
