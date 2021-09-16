@@ -1,7 +1,7 @@
 @use 'src/styles/utils' as *;
 
 .detail {
-    margin: 20px 20px 10px 25px;
+    margin: 70px 20px 10px 25px;
     display: grid; 
     grid-template-columns: 0.3fr 1.7fr;
     grid-template-areas:"img first"
@@ -10,10 +10,9 @@
                         "fourth fourth"
                         "fifth fifth";
     @include media(md) {
-        margin: 92px 93px 33px;
-        background-color: $color-primary;
+        margin: 162px 94px 33px;
         border-radius: 9px;
-        grid-template-columns: 0.5fr 1.5fr; 
+        grid-template-rows: repeat(1fr, auto);
         grid-template-areas: 
                             "img first"
                             "img second"
@@ -21,10 +20,29 @@
                             "img fourth"
                             "fifth fifth";
     }
+
+    &--primary {
+        @include media(md) {
+            background-color: $color-primary;
+        }
+    }
     
+    &--secondary {
+        @include media(md) {
+            background-color: $color-secondary;
+        }
+    }
+
+    &--colorCard {
+        @include media(md) {
+            background-color: $color-card;
+        }
+    }
+
     &__img {
         grid-area: img;
         max-width: 175px;
+        margin-top: 5px;
         @include media(md) {
             margin-left: 10px;
         }
@@ -38,7 +56,53 @@
     &__section {
         display: flex;
         flex-direction: column;
-        margin-top: 10px;
+        margin-top: 5px;
+
+        &--first {
+            grid-area: first;
+            margin-left: 8px;
+            margin-right: 8px;
+            @include media(md) {
+                margin-top: 40px;
+            }
+        }
+
+        &--second {
+            grid-area: second ;
+            @include media(md) {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
+
+        &--third {
+            grid-area: third;
+            @include media(md) {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
+
+        &--fourth {
+            grid-area: fourth;
+            margin-top: 15px;
+            @include media(md) {
+                margin-left: 8px;
+                margin-right: 8px;
+                
+            }
+        }
+
+        &--fifth {
+            grid-area: fifth;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            @include media(md) {
+                background-color: $color-bg;
+                justify-content: flex-end;
+            }
+        }
 
         &-title {
             font-size: $size-base;
@@ -81,10 +145,6 @@
         &-item {
             display: flex;
             margin-top: 10px;
-            img {
-                align-self: flex-start;
-                margin-top: 4px;
-            }
 
             h3 {
                 align-self: flex-start;
@@ -94,6 +154,13 @@
                 letter-spacing: 0.05em;
                 font-weight: 700;
                 margin-left: 5px;
+                @include media(md) {
+                    color: $color-bg;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                }
             }
 
             p {
@@ -105,6 +172,12 @@
                 align-self: stretch;
                 margin-left: 5px;
                 margin-right: 10px;
+                @include media(md) {
+                    color: $color-bg;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 30px;
+                }
             }
         }
 
@@ -118,8 +191,16 @@
             padding: 6px 12px;
             border: 2px solid $color-secondary;
             border-radius: 7px;
-            align-self: flex-end;
             background-color: transparent;
+            @include media (md){
+                margin-top: 40px;
+                height: 50px;
+                width: 213px;
+                border-radius: 10px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 30px;
+            }
         }
 
         &-img{
@@ -131,45 +212,18 @@
     }
 }
 
-.first {
-    grid-area: first;
-    margin-left: 8px;
-    margin-right: 8px;
+.icon--mobile {
+    align-self: flex-start;
+    margin-top: 4px;
     @include media(md) {
-        margin-top: 40px;
+        display: none;
     }
 }
 
-.second {
-    grid-area: second ;
+.icon--desktop {
+    display: none;
     @include media(md) {
-        margin-left: 8px;
-    margin-right: 8px;
-    }
-}
-
-.third {
-    grid-area: third;
-    @include media(md) {
-        margin-left: 8px;
-    margin-right: 8px;
-    }
-}
-
-.fourth {
-    grid-area: fourth;
-    margin-top: 15px;
-    @include media(md) {
-        margin-left: 8px;
-    margin-right: 8px;
-    }
-}
-
-.fifth {
-    grid-area: fifth;
-    flex-direction: row;
-    justify-content: space-between;
-    @include media(md) {
-        background-color: $color-bg;
+        align-self: flex-start;
+        display: inline;
     }
 }
