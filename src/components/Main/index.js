@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import imagen from "../../assets/imagen-portada--2.png";
+import imagen from "../../assets/portada.png";
 import Button from "../Button";
 
 function Main() {

@@ -12,7 +12,7 @@
       rgba(239, 236, 229, 0.49) 48.36%,
       #efece5 95.48%
     ),
-    url("../../assets/imagen-portada-2.png");
+    url("../../assets/portada.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -61,7 +61,7 @@
     display: none;
   }
 }
-@include media(md) {
+@include media(lg) {
   .main {
     background-color: $color-bg;
     background-image: none;
