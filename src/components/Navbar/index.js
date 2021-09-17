@@ -90,7 +90,7 @@ const Navbar = () => {
               alt="Icon sobre nosotros"
               src={nosotrosIcon}
             />
-            <Link className="hidden" to="#sobreNosotros">
+            <Link className="hidden" to="/sobre-nosotros">
               Sobre nosotros
             </Link>
           </li>

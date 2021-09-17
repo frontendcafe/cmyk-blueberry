@@ -1,7 +1,10 @@
 import './styles.scss';
 import IMAGES from './data';
+import useScrollToHash from '../../hooks/scroll';
 
 const Gallery = () => {
+  useScrollToHash();
+  
   return (
     <section id="galeria" className="gallery">
       <h1 className="gallery__title">Galería</h1>
