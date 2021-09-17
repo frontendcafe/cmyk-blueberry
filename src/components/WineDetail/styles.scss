@@ -54,7 +54,14 @@
             max-width: 100%;
             @include media(md) {
                 position: absolute;
-            }  
+                top: 50px;
+            }
+            @include media(lg) {
+                top: 105px;
+            }
+            @include media(xl) {
+                top: -40px;
+            }
         }
     }
 
