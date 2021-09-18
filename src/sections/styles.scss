@@ -1,7 +1,51 @@
+@use 'src/styles/utils' as *;
+
 .information {
-  display: grid;
-  gap: 1rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  justify-content: center;
+  &__cards {
+    margin-top: 100px;
+    display: grid;
+    gap: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: grid;
+    place-content: center;
+  }
+  
+  @include media(md) {
+    background: url('../assets/banner.png') no-repeat;
+    background-size: 100% auto;
+
+    .secondary {
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+
+    &__cards {
+      display: flex;
+      align-items: center;
+  
+      .primary {
+        margin-top: 80px;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 70px;
+      margin-left: 10px;
+    }
+
+    button {
+      height: 50px;
+    }
+  }
 }

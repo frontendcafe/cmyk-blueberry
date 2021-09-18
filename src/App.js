@@ -1,28 +1,25 @@
-<<<<<<< HEAD
-import Navbar from './components/Navbar';
-import Information from './sections/Information';
-||||||| 6e14a1f
-import Navbar from "./components/Navbar";
-=======
+import React, { useState } from 'react';
 import Navbar from "./components/Navbar";
 import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
->>>>>>> 5cd86dc9b8b3a33f0175a4c1576fb50c082e368c
+import Information from './sections/Information';
 
 function App() {
+
+  const [hideSucursales, setHideSucursales] = useState(false);
+
+  const handleClick = () => {
+    setHideSucursales(!hideSucursales);
+  }
+
   return (
-    <main className="App">
+    <div className="App">
       <Navbar/>
-<<<<<<< HEAD
-      <Information />
-    </main>
-||||||| 6e14a1f
-    </div>
-=======
-      <Sucursales />
+      <Information handleClick={handleClick} />
+      {hideSucursales ? <Sucursales /> : null }
       <Gallery />
+      
     </div>
->>>>>>> 5cd86dc9b8b3a33f0175a4c1576fb50c082e368c
   );
 }
 

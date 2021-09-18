@@ -68,8 +68,9 @@
     "top top"
     "desc desc";
 
-    .card-image {
+    .card-mobile__image {
         height: 178px;
+        overflow: hidden;
 
         img {
             height: 100%;
@@ -78,7 +79,7 @@
         }
     }
 
-    .card-description {
+    .card-mobile__description {
         height: 180px;
         display: flex;
         align-items: center;
