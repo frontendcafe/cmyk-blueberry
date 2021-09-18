@@ -1,0 +1,65 @@
+@use 'src/styles/utils' as *;
+
+.card-container {
+  background-color: white;
+  &__main {
+    &--title {
+      font-family: $raleway;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $size-xl;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: $color-primary;
+      padding-top: $size-sm;
+    }
+    &--paragraph {
+      font-family: $raleway;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $size-sm;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: $color-secondary;
+      padding: 15px;
+    }
+  }
+  &__image {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__cards {
+    color: $color-secondary;
+    padding: 15px;
+    &--card--title {
+      font-family: $raleway;
+      font-style: normal;
+      font-weight: 700;
+      font-size: $size-base;
+      line-height: $size-2xl;
+      text-align: center;
+      padding-top: 10px;
+    }
+    &--card--paragraph {
+      font-family: $raleway;
+      font-style: normal;
+      font-weight: 400;
+      font-size: $size-base;
+      line-height: $size-2xl;
+      text-align: center;
+    }
+  }
+  &__button {
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: $color-secondary;
+    margin-left: 75%;
+    margin-bottom: $size-sm;
+  }
+}
