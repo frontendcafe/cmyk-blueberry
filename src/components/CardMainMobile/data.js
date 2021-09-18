@@ -1,7 +1,7 @@
-export const cards ={
+export const card ={
     title: "El nuevo vino de arandanos",
     description: "Tal y como su nombre indica, el vino de arándanos se elabora a partir de los arándanos. La piel y la carne de la planta se fermentan por completo durante algún tiempo para obtener el vino de arándanos. No sólo es un vino sabroso, sino que tambien ofrece varios beneficios para la salud.",
-    paragraph: [
+    paragraphs: [
         {
             title: "Anti-envejecimiento",
             description: "tiene ciertos componentes anti-envejecimiento, concretamente varios antioxidantes que son ricos en vitamina C y E. Estas vitaminas combaten eficientemente el envejecimiento."

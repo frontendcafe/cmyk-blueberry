@@ -4,9 +4,8 @@
   background-color: white;
   &__main {
     &--title {
-      font-family: $raleway;
       font-style: normal;
-      font-weight: bold;
+      font-weight: 700;
       font-size: $size-xl;
       line-height: 150%;
       letter-spacing: 0.05em;
@@ -17,7 +16,6 @@
       padding-top: $size-sm;
     }
     &--paragraph {
-      font-family: $raleway;
       font-style: normal;
       font-weight: normal;
       font-size: $size-sm;
@@ -38,7 +36,6 @@
     color: $color-secondary;
     padding: 15px;
     &--card--title {
-      font-family: $raleway;
       font-style: normal;
       font-weight: 700;
       font-size: $size-base;
@@ -47,7 +44,6 @@
       padding-top: 10px;
     }
     &--card--paragraph {
-      font-family: $raleway;
       font-style: normal;
       font-weight: 400;
       font-size: $size-base;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import {cards} from './data';
+import {card} from './data';
 import image from '../../assets/imagen-vindano-1.png';
 import Button from "../Button";
 
@@ -9,17 +9,17 @@ function CardMainMobile() {
         <div className = "card-container">
             <div className = "card-container__main">
                 <h1 className = "card-container__main--title">
-                   {cards.title}
+                   {card.title}
                 </h1>
                 <p className = "card-container__main--paragraph">
-                    {cards.description}
+                    {card.description}
                 </p>
             </div>
             <div className = "card-container__image">
                 <img src = {image} alt = "imagen de una botella de vino"/>
             </div>
             <div className = "card-container__cards">
-            {cards.paragraph.map((card) => 
+            {card.paragraphs.map((card) => 
                 <div className = "card-container__cards--card">
                     <h1 className = "card-container__cards--card--title">
                         {card.title}
