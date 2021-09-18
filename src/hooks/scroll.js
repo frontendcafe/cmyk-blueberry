@@ -17,7 +17,7 @@ const useScrollToHash = () => {
           block: 'start',
           inline: 'nearest',
         });
-      }, 0);
+      }, 300);
       return () => clearTimeout(timeoutId);
     }, [location]);
   };

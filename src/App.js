@@ -1,5 +1,6 @@
-import Navbar from './components/Navbar';
-import Sucursales from './views/sucursales/index.js';
+import Navbar from "./components/Navbar";
+import Main from "./components/Main/index";
+import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
 import AboutUS from './views/aboutUS';
 import News from './views/news';
@@ -17,6 +18,7 @@ function App() {
       <Navbar></Navbar>
       <Switch>
         <Route path="/home" exact>
+          <Main />
           <Sucursales></Sucursales>
           <Gallery></Gallery>
         </Route>
@@ -27,6 +29,7 @@ function App() {
           <News></News>
         </Route>
         <Route path="/" exact>
+          <Main />
           <Sucursales></Sucursales>
           <Gallery></Gallery>
         </Route>
