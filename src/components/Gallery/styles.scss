@@ -1,7 +1,7 @@
 @use 'src/styles/utils' as *;
 
 .gallery {
-    
+    margin-top: 50px;    
     &__title {
         font-size: $size-5xl;
         color: $color-secondary;
@@ -30,6 +30,7 @@
     @include media(md) {
         display: grid;
         place-content: center;
+        padding-top: 100px;
         
         &__grid {
             max-width: 1200px;
