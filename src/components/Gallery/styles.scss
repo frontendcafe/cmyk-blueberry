@@ -1,7 +1,7 @@
 @use 'src/styles/utils' as *;
 
 .gallery {
-    
+    padding-top: 50px;    
     &__title {
         font-size: $size-5xl;
         color: $color-secondary;
@@ -11,7 +11,7 @@
 
     &__grid {
         display: flex;
-        
+        min-height: 300px;
 
         .gallery__center {
             display: none;
@@ -30,9 +30,11 @@
     @include media(md) {
         display: grid;
         place-content: center;
+        padding-top: 100px;
         
         &__grid {
             max-width: 1200px;
+            min-height: 600px;
             display: grid;
             grid-gap: 10px;
             grid-template-areas: "top1 top2 top3"
