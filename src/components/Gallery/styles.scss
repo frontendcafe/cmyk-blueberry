@@ -1,7 +1,6 @@
 @use 'src/styles/utils' as *;
 
 .gallery {
-    padding-top: 50px;    
     &__title {
         font-size: $size-5xl;
         color: $color-secondary;
@@ -11,7 +10,7 @@
 
     &__grid {
         display: flex;
-        min-height: 300px;
+        min-height: 100px;
 
         .gallery__center {
             display: none;
