@@ -2,18 +2,16 @@ import Button from "../components/Button";
 import CardMobile from "../components/CardsMobile";
 import CardDesktop from "../components/CardDesktop";
 import data from "./data.json";
-import BarrillesLogo from "../assets/icon-barriles.png";
-import CultivoImg from "../assets/cultivo.png";
 import { useWindow } from "../hooks";
 import "./styles.scss";
 
-export const Information = ({handleClick}) => {
+export const Information = ({handleClick, moreInfo}) => {
 
   const size = useWindow();
   console.log(size);
   
   return (
-    <section className="information">
+    <section className={`information${moreInfo ? "--expanded" : ""}`}>
       <div className="information__cards">
         {size.width < 576
           ? data.map((info) => (
@@ -31,8 +29,9 @@ export const Information = ({handleClick}) => {
                 icon={info.logo}
                 cover={info.deskImg}
                 title={info.title}
-                children={info.shortDesc}
+                children={moreInfo ? info.description : info.shortDesc}
                 type ={info.type}
+                moreInfo={moreInfo}
               />
             ))}
       </div>

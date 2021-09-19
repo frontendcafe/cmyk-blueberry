@@ -49,3 +49,19 @@
     }
   }
 }
+
+
+.information--expanded{
+  @include media(md) {
+    display: flex;
+    flex-direction: column;
+    background: url('../assets/banner.png') no-repeat;
+    background-size: 100% auto;
+
+    .information__cards {
+      display: flex;
+      flex-direction: column;
+      margin-top: 450px;
+    }
+  }
+}

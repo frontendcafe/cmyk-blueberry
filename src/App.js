@@ -6,17 +6,17 @@ import Information from './sections/Information';
 
 function App() {
 
-  const [hideSucursales, setHideSucursales] = useState(false);
+  const [moreInfo, setMoreInfo] = useState(false);
 
   const handleClick = () => {
-    setHideSucursales(!hideSucursales);
+    setMoreInfo(!moreInfo);
   }
 
   return (
     <div className="App">
       <Navbar/>
-      <Information handleClick={handleClick} />
-      {hideSucursales ? <Sucursales /> : null }
+      <Information handleClick={handleClick} moreInfo={moreInfo} />
+      {moreInfo ? <Sucursales /> : null }
       <Gallery />
       
     </div>
