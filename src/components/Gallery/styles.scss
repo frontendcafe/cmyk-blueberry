@@ -13,7 +13,6 @@
 
     &__grid {
         display: flex;
-        align-items: center;
         overflow: auto;
         scroll-snap-type: x proximity;
 
@@ -22,9 +21,8 @@
         }
 
         .img--square{
-            max-width: 400px;
-            width: 40%;
-            height: auto;
+            width: 400px;
+            max-width: 35%;
         }
 
         img {
@@ -77,8 +75,7 @@
             }
 
             .img--square{
-                width: 100%;
-                height: auto;
+                max-width: 100%;
             }
 
             img {
