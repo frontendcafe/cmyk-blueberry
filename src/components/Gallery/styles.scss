@@ -1,17 +1,21 @@
 @use 'src/styles/utils' as *;
 
 .gallery {
-    padding-top: 50px;    
+    padding-top: 50px;
+    
     &__title {
-        font-size: $size-5xl;
+        font-size: $size-xl;
+        font-weight: 700;
         color: $color-secondary;
-        font-weight: bold;
-        margin: $size-base;
-    }
+        letter-spacing: 0.05em;
+        text-align: center;
+    }   
 
     &__grid {
         display: flex;
-        min-height: 300px;
+        align-items: center;
+        overflow: auto;
+        scroll-snap-type: x proximity;
 
         .gallery__center {
             display: none;
@@ -19,11 +23,12 @@
 
         .img--square{
             max-width: 400px;
+            width: 40%;
             height: auto;
         }
 
         img {
-            margin: $size-base;
+            margin: $size-base 5px;
         }
     }
 
@@ -31,6 +36,12 @@
         display: grid;
         place-content: center;
         padding-top: 100px;
+
+        &__title {
+            font-size: $size-4xl;
+            margin: $size-base;
+            letter-spacing: 0.05em;
+        }
         
         &__grid {
             max-width: 1200px;
@@ -66,7 +77,7 @@
             }
 
             .img--square{
-                max-width: 100%;
+                width: 100%;
                 height: auto;
             }
 
