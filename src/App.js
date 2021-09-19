@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
 import Navbar from "./components/Navbar";
+import Main from "./components/Main/index";
+import Information from './sections/Information';
 import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
-import Information from './sections/Information';
+import AboutUS from './views/aboutUS';
+import News from './views/news';
+import { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
 
 function App() {
 
@@ -14,13 +23,36 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
-      <Information handleClick={handleClick} moreInfo={moreInfo} />
-      {moreInfo ? <Sucursales /> : null }
-      <Gallery />
-      
+      <Navbar></Navbar>
+      <Switch>
+        <Route path="/home" exact>
+          <Main />
+          <Information handleClick={handleClick} moreInfo={moreInfo} />
+          {moreInfo ? <Sucursales /> : null }
+          <Gallery></Gallery>
+        </Route>
+        <Route path="/sobre-nosotros" exact>
+          <AboutUS></AboutUS>
+        </Route>
+        <Route path="/lo-nuevo" exact>
+          <News></News>
+        </Route>
+        <Route path="/" exact>
+          <Main />
+          <Sucursales></Sucursales>
+          <Gallery></Gallery>
+        </Route>
+      </Switch>
     </div>
   );
 }
 
-export default App;
+function AppWithProviders() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default AppWithProviders;

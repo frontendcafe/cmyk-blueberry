@@ -1,8 +1,10 @@
 import "./styles.scss";
 import CardStore from "../../components/CardStore/index";
 import { cards } from "./data";
+import useScrollToHash from '../../hooks/scroll';
 
 const Sucursales = () => {
+  useScrollToHash();
   return (
     <div id="sucursales">
       <h1 id="sucursales__title">NUESTRAS SUCURSALES</h1>
