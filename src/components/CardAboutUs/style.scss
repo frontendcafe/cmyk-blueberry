@@ -1,0 +1,27 @@
+@use 'src/styles/utils' as *;
+.container {
+  .card-container {
+    width: 408px;
+    height: 384px;
+    left: 118px;
+    top: 1210px;
+    border: 5px solid $color-secondary;
+    box-sizing: border-box;
+    &__image {
+      width: 296px;
+      height: 240px;
+    }
+    &__box {
+      &__icons {
+        &--linkedin {
+          width: 35, 81px;
+          height: 24, 88px;
+        }
+        &--github {
+          width: 48px;
+          height: 46, 82px;
+        }
+      }
+    }
+  }
+}
