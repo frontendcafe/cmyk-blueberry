@@ -1,7 +1,7 @@
 @use 'src/styles/utils' as *;
 
 .gallery {
-    padding-top: 50px;    
+    min-height: 400px;
     &__title {
         font-size: $size-5xl;
         color: $color-secondary;
@@ -11,7 +11,7 @@
 
     &__grid {
         display: flex;
-        min-height: 300px;
+        overflow: scroll;
 
         .gallery__center {
             display: none;
@@ -31,16 +31,16 @@
         display: grid;
         place-content: center;
         padding-top: 100px;
-        
+    
         &__grid {
             max-width: 1200px;
-            min-height: 600px;
+            min-height: 400px;
             display: grid;
             grid-gap: 10px;
             grid-template-areas: "top1 top2 top3"
                                 "center center center"
                                 "btm1 btm2 btm3";
-
+            overflow: visible;
             .gallery__center {
                 display: block;
                 grid-area: center;
