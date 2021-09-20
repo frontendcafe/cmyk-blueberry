@@ -16,7 +16,7 @@
   }
   
   @include media(md) {
-    background: url('../assets/banner.png') no-repeat;
+    background: url('../../assets/banner.png') no-repeat;
     background-size: 100% auto;
 
     .secondary {
@@ -55,7 +55,7 @@
   @include media(md) {
     display: flex;
     flex-direction: column;
-    background: url('../assets/banner.png') no-repeat;
+    background: url('../../assets/banner.png') no-repeat;
     background-size: 100% auto;
 
     .information__cards {

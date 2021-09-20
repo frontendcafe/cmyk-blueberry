@@ -1,8 +1,8 @@
-import Button from "../components/Button";
-import CardMobile from "../components/CardsMobile";
-import CardDesktop from "../components/CardDesktop";
+import Button from "../../components/Button";
+import CardMobile from "../../components/CardsMobile";
+import CardDesktop from "../../components/CardDesktop";
 import data from "./data.json";
-import { useWindow } from "../hooks";
+import { useWindow } from "../../hooks/useWindow";
 import "./styles.scss";
 
 export const Information = ({handleClick, moreInfo}) => {

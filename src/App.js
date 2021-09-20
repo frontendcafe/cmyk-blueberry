@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Main from "./components/Main/index";
-import Information from './sections/Information';
+import Information from './views/information/Information';
 import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
 import AboutUS from './views/aboutUS';
@@ -39,7 +39,8 @@ function App() {
         </Route>
         <Route path="/" exact>
           <Main />
-          <Sucursales></Sucursales>
+          <Information handleClick={handleClick} moreInfo={moreInfo} />
+          {moreInfo ? <Sucursales /> : null }
           <Gallery></Gallery>
         </Route>
       </Switch>
