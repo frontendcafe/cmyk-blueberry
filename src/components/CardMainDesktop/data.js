@@ -15,9 +15,7 @@ export const card ={
             description: "Los arándanos utilizados para hacer este vino producen compuestos que protegen nuestro sistema inmunológico. Puede reducir el colesterol e incluso reducir las tasas inflamatorias en el cuerpo."
         },
         {
-            title: "consumirlo con moderación",
-        description: "Para conservarlo una vez abierto, lo mejor es volverlo a tapar con el corcho y asegurarse de que no queda expuesto al aire."
+            description: "Uno de los problemas es que beber vino de arándano puede llegar a convertirse en adictivo con el tiempo. Los amantes de este vino, por lo tanto, tienen que aprender a consumirlo con moderación. Para conservarlo una vez abierto, lo mejor es volverlo a tapar con el corcho y asegurarse de que no queda expuesto al aire."
         }
     ]
 };
-
