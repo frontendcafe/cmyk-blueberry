@@ -53,10 +53,17 @@
     flex-direction: column;
     background: url('../../assets/banner.png') no-repeat;
     background-size: 100% auto;
+    padding: 2em;
 
     .information__cards {
       display: flex;
       flex-direction: column;
+      margin-top: 250px;
+    }
+  }
+
+  @include media(xl){
+    .information__cards {
       margin-top: 450px;
     }
   }
