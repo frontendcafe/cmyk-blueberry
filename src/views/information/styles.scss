@@ -2,7 +2,6 @@
 
 .information {
   &__cards {
-    margin-top: 100px;
     display: grid;
     gap: 1rem;
     padding-top: 4rem;
@@ -19,8 +18,8 @@
     background: url('../../assets/banner.png') no-repeat;
     background-size: 100% auto;
 
-    .secondary {
-      margin-top: 10px;
+    .primary {
+      margin-top: 300px;
     }
   }
 
@@ -31,10 +30,7 @@
     &__cards {
       display: flex;
       align-items: center;
-  
-      .primary {
-        margin-top: 80px;
-      }
+      
     }
 
     &__btn {
