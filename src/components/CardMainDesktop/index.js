@@ -14,7 +14,7 @@ const CardMainDesktop = () => {
 
                 <div className="top-text">
                     <h1>{ card.title }</h1>
-                    <p>{ card.description }</p>
+                    <p>{ card.description } <span>{ card.descBold }</span></p>
                 </div>
 
                 <div className="card-main__container__grid">
@@ -42,7 +42,7 @@ const CardMainDesktop = () => {
                 </div>
 
                 <div className="bottom-text">
-                    <p>{ card.paragraphs[card.paragraphs.length - 1].description }</p>
+                    <p>Uno de los problemas es que beber vino de arándano puede llegar a convertirse en adictivo con el tiempo. Los amantes de este vino, por lo tanto, tienen que aprender a <span>consumirlo con moderación</span>. Para conservarlo una vez abierto, lo mejor es volverlo a tapar con el corcho y asegurarse de que no queda expuesto al aire.</p>
                 </div>
 
                 <Button variant="secondary" text="Volver" clases='card-container__button'><a href="#"></a></Button>

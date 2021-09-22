@@ -145,6 +145,11 @@
             grid-area: foot;
         }
 
+        span {
+            color: $color-secondary;
+            font-weight: bold;
+        }
+
         &__texts {
             width: 100%;
         }

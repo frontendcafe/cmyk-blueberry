@@ -11,6 +11,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import CardMainDesktop from "./components/CardMainDesktop";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Switch>
         <Route path="/home" exact>
           <Main />
+          <CardMainDesktop />
           <Information handleClick={handleClick} moreInfo={moreInfo} />
           {moreInfo ? <Sucursales /> : null }
           <Gallery></Gallery>
@@ -38,6 +40,7 @@ function App() {
           <News></News>
         </Route>
         <Route path="/" exact>
+          <CardMainDesktop />
           <Main />
           <Information handleClick={handleClick} moreInfo={moreInfo} />
           {moreInfo ? <Sucursales /> : null }
