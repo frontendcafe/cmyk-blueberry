@@ -27,7 +27,7 @@ export const wines = [
         "img" : wineNisoma
     },
     {
-        "title": "Red Wine - Since 2003",
+        "title": "RED WINE - Since 2003",
         "description": "Es una línea de vinos de alta gama elaborados en pequeñas cantidades, resultado de largos periodos de investigación y reconocimiento de los mejores terruños dentro de nuestras fincas. Cada ejemplar es el fiel reflejo de un viñedo especial ubicado en una microzona de la región de Cuyo seleccionada por sus características de calidad.",
         "composition": "100% Malbec.",
         "color": "Rojo con reflejos bordó.",

@@ -1,0 +1,55 @@
+@use 'src/styles/utils' as *;
+
+.cardWine {
+    display: flex;
+    flex-direction: column;
+    width: 185px;
+    border-radius: $rounded;
+    margin: 20px;
+
+    &--primary {
+        background-color: $color-primary;
+    }
+
+    &--secondary {
+        background-color: $color-secondary;
+    }
+
+    &--colorCard {
+        background-color: $color-card;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 10px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+
+            h2, h3{
+                font-size: $size-base;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.05em;
+                color: $color-bg;
+            }
+        }
+
+        &-img {
+            width: 65px;
+            position: relative;
+            top: -20px;
+            align-self: stretch;
+        }
+    }
+
+    &__button {
+        margin: 0px 10px 10px;
+    }
+}
