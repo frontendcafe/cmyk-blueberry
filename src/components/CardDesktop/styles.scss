@@ -33,7 +33,7 @@
     border: 5px solid $color-secondary;
 
     .card-desktop__content {
-      color: $color-text;
+      color: $color-secondary;
     }
   }
 
@@ -44,7 +44,7 @@
     padding-bottom: $size-lg;
     grid-template-columns: max-content auto;
 
-    &-title {
+    &--title {
       font-weight: bold;
       font-size: $size-3xl;
     }
@@ -58,5 +58,27 @@
 
   &__image {
     mix-blend-mode: multiply;
+  }
+
+}
+
+.card-desktop--expanded {
+  max-width: 1200px;
+
+  &.primary {
+    height: 695px;
+    color: white;
+    align-content: flex-start;
+    background-color: $color-primary;
+    border-radius: $rounded-mobile;
+    border: solid $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    
+    .card-desktop__image {
+      width: 40%;
+    }
   }
 }
