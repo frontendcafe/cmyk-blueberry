@@ -1,0 +1,30 @@
+@use 'src/styles/utils' as *;
+
+//Ya hay una clase main
+.mainDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.mainDiv__img {
+    width: 20%;
+    height: 20%;
+    align-self: center;
+}
+
+.mainDiv__text {
+    width: 60%;
+    text-align: center;
+}
+
+.text__content {
+    font-family: $raleway;
+    size: $size-3xl;
+    color: black;
+    font-weight: normal;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+}
