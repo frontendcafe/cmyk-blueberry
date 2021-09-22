@@ -13,16 +13,16 @@ const CardMobile = ( { title, description, logo, img } ) => {
     }
 
     return (
-        <div className={`card-container ${ showMore ? "full-card" : "small-card"} ${ animate ? "openCard" : "closeCard" }`}>
-            <div className="card-title">
-                <div className="card-title-left">
+        <div className={`card-mobile ${ showMore ? "full-card" : "small-card"} ${ animate ? "openCard" : "closeCard" }`}>
+            <div className="card-mobile__title">
+                <div className="card-mobile__title--left">
                     <img src={logo} alt="logo" className="logo"/>
                     <h1>{ title }</h1>
                 </div>
                 <button onClick={() => handleClick()}><img src={ Arrow } alt="right-arrow" className={ showMore ? "rotate" : "rotateBack"} /></button>
             </div>
-            <div className="card-image"><img src={ img } alt="img"/></div>
-            <p className="card-description">{ showMore ? description : `${description.substring(0,212)}`}</p>
+            <div className="card-mobile__image"><img src={ img } alt="img"/></div>
+            <p className="card-mobile__description">{ showMore ? description : `${description.substring(0,212)}`}</p>
         </div>
     )
 }

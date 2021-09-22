@@ -30,7 +30,7 @@
         }
     }
 
-    @include media(md) {
+    @include media(lg) {
         display: grid;
         place-content: center;
         padding-top: 100px;

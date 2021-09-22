@@ -1,9 +1,11 @@
 import Navbar from "./components/Navbar";
 import Main from "./components/Main/index";
+import Information from './views/information/Information';
 import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
 import AboutUS from './views/aboutUS';
 import News from './views/news';
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,13 +15,20 @@ import {
 
 function App() {
 
+  const [moreInfo, setMoreInfo] = useState(false);
+
+  const handleClick = () => {
+    setMoreInfo(!moreInfo);
+  }
+
   return (
     <div className="App">
       <Navbar></Navbar>
       <Switch>
         <Route path="/home" exact>
           <Main />
-          <Sucursales></Sucursales>
+          <Information handleClick={handleClick} moreInfo={moreInfo} />
+          {moreInfo ? <Sucursales /> : null }
           <Gallery></Gallery>
         </Route>
         <Route path="/sobre-nosotros" exact>
@@ -30,7 +39,8 @@ function App() {
         </Route>
         <Route path="/" exact>
           <Main />
-          <Sucursales></Sucursales>
+          <Information handleClick={handleClick} moreInfo={moreInfo} />
+          {moreInfo ? <Sucursales /> : null }
           <Gallery></Gallery>
         </Route>
       </Switch>

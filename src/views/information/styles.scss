@@ -1,0 +1,70 @@
+@use 'src/styles/utils' as *;
+
+.information {
+  &__cards {
+    display: grid;
+    gap: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: grid;
+    place-content: center;
+  }
+  
+  @include media(md) {
+    background: url('../../assets/banner.png') no-repeat;
+    background-size: 100% auto;
+
+    .primary {
+      margin-top: 300px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+
+    &__cards {
+      display: flex;
+      align-items: center;
+      
+    }
+
+    &__btn {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 70px;
+      margin-left: 10px;
+    }
+
+    button {
+      height: 50px;
+    }
+  }
+}
+
+
+.information--expanded{
+  @include media(md) {
+    display: flex;
+    flex-direction: column;
+    background: url('../../assets/banner.png') no-repeat;
+    background-size: 100% auto;
+    padding: 2em;
+
+    .information__cards {
+      display: flex;
+      flex-direction: column;
+      margin-top: 250px;
+    }
+  }
+
+  @include media(xl){
+    .information__cards {
+      margin-top: 450px;
+    }
+  }
+}
