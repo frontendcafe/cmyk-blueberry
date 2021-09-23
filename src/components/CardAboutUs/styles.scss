@@ -1,0 +1,112 @@
+@use "src/styles/utils" as *;
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  border-color: $color-secondary;
+  border-width: 3px;
+  width: 239px;
+  height: 225px;
+  background-color: $color-bg !important;
+  margin-top: 8rem;
+
+  @include media(md) {
+    margin-top: 3rem;
+    width: 408px;
+    height: 384px;
+  }
+}
+
+.card-container__image {
+  position: relative;
+  width: 70%;
+
+  @include media(md) {
+    width: 100%;
+  }
+}
+
+.image__content {
+  position: absolute;
+  top: -5rem;
+  left: 23%;
+
+  @include media(md) {
+    left: 15%;
+  }
+}
+.card-container__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  padding-left: 7%;
+  padding-bottom: 0.5rem;
+  text-align: left;
+
+  @include media(md) {
+    padding-bottom: 1rem;
+    padding-left: 15%;
+  }
+}
+
+.box__title {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+
+    @include media(md) {
+        margin-bottom: 1rem;
+    }
+}
+
+.title__text {
+  color: $color-primary;
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $size-3xl;
+  line-height: 150%;
+  text-align: left;
+  /* or 42px */
+  letter-spacing: 0.05em;
+
+  &-role{
+    font-size: $size-md;
+    
+    @include media (md) {
+        font-size: $size-lg;        
+    }
+  }
+}
+
+.box__mail {
+    font-family: $raleway;
+    margin-bottom: 1rem;
+
+    font-size: $size-md;
+    
+    @include media (md) {
+        font-size: $size-lg; 
+        margin-bottom: 2rem;
+    }
+}
+
+.card-container__box--icons {
+  display: flex;
+  margin-top: 1rem;
+  width: 50%;
+  justify-content: space-around;
+
+  @include media(md) {
+    width: 30%;
+  }
+}
+
+.icons__vecotor {
+  height: 2rem;
+
+  img {
+    height: 100%;
+  }
+}

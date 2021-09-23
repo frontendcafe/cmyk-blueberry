@@ -22,9 +22,41 @@
 
 .text__content {
     font-family: $raleway;
-    size: $size-3xl;
+    font-size: $size-base;
     color: black;
     font-weight: normal;
     line-height: 150%;
     letter-spacing: 0.05em;
+
+    @include media(md) {
+        font-size: $size-3xl;
+    }
+}
+
+.mainDiv__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    justify-content: space-around;
+    align-items: center;
+    
+    @include media(md) {
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+}
+
+.mainDiv__title {
+    margin-bottom: 2rem;
+}
+
+.title__content {
+    font-size: $size-xl;
+    color: $color-primary;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
 }
