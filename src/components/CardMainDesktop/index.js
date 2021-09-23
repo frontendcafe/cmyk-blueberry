@@ -1,10 +1,18 @@
 import React from 'react';
 import './styles.scss';
+import { useHistory } from 'react-router';
 import { card } from './data';
 import image from '../../assets/imagen-card-main.png';
 import Button from "../Button";
 
 const CardMainDesktop = () => {
+
+    const history = useHistory();
+
+    const handleClick = () => {
+        history.push("/home")
+    }
+
     return (
         <div className="card-main">
             <div className="card-main__container">
@@ -45,7 +53,7 @@ const CardMainDesktop = () => {
                     <p>Uno de los problemas es que beber vino de arándano puede llegar a convertirse en adictivo con el tiempo. Los amantes de este vino, por lo tanto, tienen que aprender a <span>consumirlo con moderación</span>. Para conservarlo una vez abierto, lo mejor es volverlo a tapar con el corcho y asegurarse de que no queda expuesto al aire.</p>
                 </div>
 
-                <Button variant="secondary" text="Volver" clases='card-container__button'></Button>
+                <Button variant="secondary" text="Volver" clases='card-container__button' onClick={handleClick}></Button>
             </div>
         </div>
     )

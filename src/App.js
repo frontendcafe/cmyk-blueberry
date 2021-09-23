@@ -5,7 +5,6 @@ import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
 import AboutUS from './views/aboutUS';
 import News from './views/news';
-import CardMainDesktop from "./components/CardMainDesktop";
 import { useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -27,8 +26,6 @@ function App() {
       <Navbar></Navbar>
       <Switch>
         <Route path="/home" exact>
-          
-        <CardMainDesktop />
           <Main />
           <Information handleClick={handleClick} moreInfo={moreInfo} />
           {moreInfo ? <Sucursales /> : null }
@@ -41,8 +38,6 @@ function App() {
           <News></News>
         </Route>
         <Route path="/" exact>
-          
-        <CardMainDesktop />
           <Main />
           <Information handleClick={handleClick} moreInfo={moreInfo} />
           {moreInfo ? <Sucursales /> : null }

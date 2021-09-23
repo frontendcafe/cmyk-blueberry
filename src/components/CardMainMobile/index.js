@@ -9,7 +9,7 @@ function CardMainMobile() {
         <div className = "card-container">
             <div className = "card-container__main">
                 <h1 className = "card-container__main--title">
-                   {card.title}
+                    {card.title}
                 </h1>
                 <p className = "card-container__main--paragraph">
                     {card.description}
@@ -30,11 +30,9 @@ function CardMainMobile() {
                 </div>
             )}
             </div>
-            <a href="">
-                <Button variant="secondary" text="Volver" clases='card-container__button'></Button>
-            </a>
+            <Button variant="secondary" text="Volver" clases='card-container__button'></Button>
         </div>
-     );
+    );
 }
 
 export default CardMainMobile;
