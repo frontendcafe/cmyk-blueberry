@@ -45,7 +45,7 @@ const CardMainDesktop = () => {
                     <p>Uno de los problemas es que beber vino de arándano puede llegar a convertirse en adictivo con el tiempo. Los amantes de este vino, por lo tanto, tienen que aprender a <span>consumirlo con moderación</span>. Para conservarlo una vez abierto, lo mejor es volverlo a tapar con el corcho y asegurarse de que no queda expuesto al aire.</p>
                 </div>
 
-                <Button variant="secondary" text="Volver" clases='card-container__button'><a href="#"></a></Button>
+                <Button variant="secondary" text="Volver" clases='card-container__button'></Button>
             </div>
         </div>
     )
