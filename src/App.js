@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Main from "./components/Main/index";
 import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
@@ -34,6 +35,7 @@ function App() {
           <Gallery></Gallery>
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }
