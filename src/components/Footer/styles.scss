@@ -5,19 +5,28 @@
   font-size: $size-lg;
   background-color: $color-secondary;
   color: $color-bg;
+  margin-top: 10px;
   height: 132px;
   width: auto;
   padding: 16px 18px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 30% 30% 39%;
 
   @include media(md) {
     height: 419px;
     width: auto;
     padding: 74px 126px;
   }
+  
+  
+  &__logo {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+  
 
-  &__logo-wineberry {
+
+  &-img {
     width: 100px;
     height: 100px;
 
@@ -25,26 +34,40 @@
       width: 270px;
       height: 270px;
     }
-  }
-  &__logo {
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-  }
+  } } 
 
-  &__section {
-    display: none;
+  
+  
 
-    @include media(md) {
-      visibility: visible;
-    }
+  // &__section {
+  //   // 
+  // }
+    
+
+  ul {
+    padding-top: 29px;
+    list-style: none;
+    // display:none;
+      @include media(md) {
+        visibility: visible;
+      }
   }
-
-  &__section--item {
+  
+  li {
     font-weight: 700;
     line-height: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding-bottom: 15px;
+  } 
+
+  
+
+
+  &__socialmedia {
+    padding-top: 40px;
   }
+
 }
+
+
