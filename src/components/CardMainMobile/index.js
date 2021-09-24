@@ -1,10 +1,18 @@
 import React from 'react';
 import './style.scss';
+import { useHistory } from 'react-router';
 import {card} from './data';
 import image from '../../assets/imagen-vindano-1.png';
 import Button from "../Button";
 
 function CardMainMobile() {
+
+    const history = useHistory();
+
+    const handleClick = () => {
+        history.push("/home")
+    }
+
     return ( 
         <div className = "card-container">
             <div className = "card-container__main">
@@ -30,7 +38,7 @@ function CardMainMobile() {
                 </div>
             )}
             </div>
-            <Button variant="secondary" text="Volver" clases='card-container__button'></Button>
+            <Button variant="secondary" text="Volver" clases='card-container__button' onClick={handleClick}></Button>
         </div>
     );
 }
