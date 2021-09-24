@@ -47,7 +47,6 @@
   @include media(md) {
     height: 419px;
     font-size: $size-lg;
-    border: 1px solid red;
 
     &__logo {
       &-img {
