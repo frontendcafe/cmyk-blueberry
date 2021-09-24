@@ -26,7 +26,7 @@
   &__cards {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
@@ -34,7 +34,7 @@
     @include media(lg) {
       flex-direction: row;
       width: 100%;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
     }
   }
@@ -51,5 +51,33 @@
       font-size: $size-5xl;
       color: $color-secondary;
     }
+  }
+
+  -webkit-animation: focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
   }
 }

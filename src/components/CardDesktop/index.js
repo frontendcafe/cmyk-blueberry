@@ -1,11 +1,11 @@
 import './styles.scss';
 
-function CardDesktop({ children, type = 'secondary', title, icon, cover }) {
+function CardDesktop({ children, type = 'secondary', title, icon, cover, moreInfo }) {
   return (
-    <article className={`card-desktop ${type}`}>
+    <article className={`card-desktop${moreInfo ? "--expanded" : ""} ${type} `}>
       <header className="card-desktop__header">
-        { icon && <img src={icon} title="Card icon" alt="Card icon" className="card-desktop__header-icon" /> }
-        <h3 className="card-desktop__header-title">
+        { icon && <img src={icon} title="Card icon" alt="Card icon" /> }
+        <h3 className="card-desktop__header--title">
           { title }
         </h3>
       </header>

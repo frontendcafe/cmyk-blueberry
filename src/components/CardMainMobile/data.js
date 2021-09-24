@@ -15,7 +15,7 @@ export const card ={
             description: "Los arándanos utilizados para hacer este vino producen compuestos que protegen nuestro sistema inmunológico. Puede reducir el colesterol e incluso reducir las tasas inflamatorias en el cuerpo."
         },
         {
-            title: "Consumirlo con moderación",
+            title: "consumirlo con moderación",
         description: "Para conservarlo una vez abierto, lo mejor es volverlo a tapar con el corcho y asegurarse de que no queda expuesto al aire."
         }
     ]

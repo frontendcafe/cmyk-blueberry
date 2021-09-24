@@ -46,14 +46,6 @@
       letter-spacing: 0.05em;
       height: 58px;
     }
-
-    a {
-      button {
-        z-index: 2;
-        margin-left: 25vw;
-        top: 82vh;
-      }
-    }
   }
   
   
@@ -61,6 +53,15 @@
     display: none;
   }
 }
+
+@include media(sm) {
+  .main {
+    &__texto {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 @include media(lg) {
   .main {
     background-color: $color-bg;

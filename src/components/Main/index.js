@@ -2,8 +2,16 @@ import React from "react";
 import "./style.scss";
 import imagen from "../../assets/portada.png";
 import Button from "../Button";
+import { useHistory } from 'react-router';
+
 
 function Main() {
+  const history = useHistory();
+
+  const handleClick = () => {
+      history.push("/lo-nuevo")
+  }
+
   return (
     <main className="main">
       <div className="main__texto">
@@ -22,9 +30,7 @@ function Main() {
             la nuestra tampoco... <br />
           </span>
         </h1>
-        <a href="#">
-          <Button variant="primary" text="Conocé lo nuevo"></Button>
-        </a>
+        <Button variant="primary" text="Conocé lo nuevo" onClick={handleClick} ></Button>
       </div>
       <div className="main__img">
         <img

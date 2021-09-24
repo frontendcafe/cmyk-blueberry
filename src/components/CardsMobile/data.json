@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Nuestras bodegas",
+    "description": "Ubicada en Mendoza, Bodegas Wineberry se encuentra en un mágico lugar. Aquí las vides reciben permanente sol, viento suave y seco y abuendante agua que baja de las montañas y se combina con los suelos pedregosos. logrando vinos de alta calidad, frutados y redondos. Moderna e innovadora, la actual bodega fue construida bajo altos estándares de calidad respetando el patrimonio histórico y paisajístico perteneciente a la zona. Cada detalle fue cuidadosamente calculado como la vegetación autóctona y la construcción fue realizada bajo técnicas anti-sísmicas de las más avanzadas en el mundo",
+    "type": "secondary",
+    "logo": "require('../assets/icon-barriles.png').default",
+    "img": "../assets/viniedo.png"
+  },
+  {
+    "title": "Nuestro proceso",
+    "description": "Todo el proceso, desde la plantación de viñas, cosecha, elaboración, fraccionamiento, distribución y comercialización, es cuidadosamente controlado con un equipamiento tecnológico de última generación, lográndose así resultados por demás satisfactorios. Luego del proceso de elaboración, nuestros vinos tintos se añejan en vasijas de roble de Nancy, Francia, de 5.000 a 35.000 litros, contando con 440 en total entre toneles y cubas. El añejamiento otorga suavidad y untuosidad ya que la madera suaviza los taninos del vino, engrosa su estructura y prolonga su vida favoreciendo una estiba posterior en botella por varios años, dando como resultado un vino de mayor complejidad. Los vinos blancos serán conservados en tanques por un periodo máximo de un año. La finalidad de la Bodega es obtener blancos sin madera, frutados, frescos y jóvenes.",
+    "type": "primary",
+    "logo": "require('../assets/icon-barriles.png').default",
+    "img": "../assets/viniedo.png"
+  }
+]

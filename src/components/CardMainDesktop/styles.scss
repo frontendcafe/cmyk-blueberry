@@ -1,0 +1,173 @@
+@use 'src/styles/utils' as *;
+
+.card-main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__container {
+        margin-top: 110px;
+        max-width: 1200px;
+        height: 100vh; 
+        background-color: $color-bg;
+        color: $color-secondary;
+        display: grid;
+        grid-template-areas: "wine title title"
+                            "foot foot foot"
+                            "space space button";
+
+
+        &__image {
+            width: 230px;
+            height: 100%;
+            grid-area: wine;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__grid {
+            margin-top: 100px;
+            max-width: 1200px;
+            position: absolute;
+            height: 100%;
+            display: grid;
+            place-content: center;
+            grid-template-areas: 
+            "box1 box2 p1"
+            "box3 box4 p2"
+            "box5 box6 p3";
+
+            div {
+                width: 100px;
+                height: 200px;
+                margin-left: 20px;
+            }
+
+            div[grid-area="box1"]{
+                grid-area: box1;
+            }
+            div[grid-area="box2"]{
+                grid-area: box2;
+                border-top: 2px dotted $color-primary;
+                border-left: 2px dotted $color-primary;
+                margin-top: 50px;
+                height: 50%;
+            }
+            div[grid-area="box3"]{
+                grid-area: box3;
+                border-left: 2px dotted $color-primary;
+                transform: translateX(20px);
+            }
+            div[grid-area="box4"]{
+                grid-area: box4;
+                border-bottom: 2px dotted $color-primary;
+                height: 50%;
+            }
+            div[grid-area="box5"]{
+                grid-area: box5;
+                border-top: 2px dotted $color-primary;
+                transform: translateX(20px);
+            }
+            div[grid-area="box6"]{
+                grid-area: box6;
+                border-top: 2px dotted $color-primary;
+            }
+
+            article[grid-area="p1"] {
+                grid-area: p1;
+            }
+            article[grid-area="p2"] {
+                grid-area: p2;
+            }
+            article[grid-area="p3"] {
+                grid-area: p3;
+            }
+
+            article {
+                border-left: 2px dotted $color-primary;
+                height: 100px;
+                padding-left: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            div::after,
+            div::before {
+                content:"";
+                position: absolute;
+                background-color: $color-primary;
+            }
+
+            div[grid-area="box2"]::after,
+            div[grid-area="box3"]::after,
+            div[grid-area="box4"]::after {
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                border: 4px solid white;
+            }
+
+            div[grid-area="box2"]::after{
+                margin-top: 90px;
+                margin-left: -13px;
+            }
+
+            div[grid-area="box3"]::after{
+                margin-top: 0px;
+                margin-left: -13px;
+            }
+
+            div[grid-area="box4"]::after{
+                margin-top: 85px;
+                margin-left: -13px;
+            }
+
+            h2 {
+                font-weight: bold;
+            }
+
+            @include media(md) {
+                margin-top: 50px;
+            }
+        }
+
+        .top-text {
+            width: 100%;
+            grid-area: title;
+            
+            transform: translateX(-50px);
+            h1 {
+                font-size: $size-lg;
+                color: $color-primary;
+                font-weight: bold;
+            }
+        }
+
+        .bottom-text {
+            grid-area: foot;
+        }
+
+        span {
+            color: $color-secondary;
+            font-weight: bold;
+        }
+
+        &__texts {
+            width: 100%;
+        }
+
+        button {
+            grid-area: button;
+            width: 210px;
+            height: 50px;
+            margin: 0;
+
+            @include media(sm) {
+                margin: 50px;
+            }
+        }
+    }
+}
