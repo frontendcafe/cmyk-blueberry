@@ -1,7 +1,8 @@
 @use 'src/styles/utils' as *;
 
 .card-container {
-  background-color: white;
+  background-color: $color-bg;
+  margin-top: 20px;
   &__main {
     &--title {
       font-style: normal;
