@@ -1,73 +1,86 @@
 @use "src/styles/utils" as *;
 
 .footer {
-  font-family: $raleway;
-  font-size: $size-lg;
+  font-size: 12px;
   background-color: $color-secondary;
   color: $color-bg;
-  margin-top: 10px;
+  margin-top: 40px;
   height: 132px;
-  width: auto;
-  padding: 16px 18px;
-  display: grid;
-  grid-template-columns: 30% 30% 39%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &__logo {
+    &-img{
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  &__section {
+    display: none;
+  }
+
+  &__socialmedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+
+    &-icon {
+      a:nth-child(2), a:nth-child(3) {
+        margin-left: 10px;
+      }
+    }
+
+    &-wsp {
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    
+  }
 
   @include media(md) {
     height: 419px;
-    width: auto;
-    padding: 74px 126px;
-  }
-  
-  
-  &__logo {
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-  
+    font-size: $size-lg;
+    border: 1px solid red;
 
-
-  &-img {
-    width: 100px;
-    height: 100px;
-
-    @include media(md) {
-      width: 270px;
-      height: 270px;
-    }
-  } } 
-
-  
-  
-
-  // &__section {
-  //   // 
-  // }
-    
-
-  ul {
-    padding-top: 29px;
-    list-style: none;
-    // display:none;
-      @include media(md) {
-        visibility: visible;
+    &__logo {
+      &-img {
+        height: 270px;
+        width: 270px;
       }
+    }
+
+    &__section {
+      display: flex;
+      align-items: center;
+      height: 270px;
+      ul {
+        list-style: none;
+        li {
+          margin: 10px;
+        }
+      }
+    }
+
+    &__socialmedia {
+      &-icon {
+        margin-top: 10px;
+      }
+
+      &-wsp {
+        margin-top: 10px;
+        span {
+          font-size: $size-lg;
+        }
+      }
+    }
   }
-  
-  li {
-    font-weight: 700;
-    line-height: 30px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 15px;
-  } 
-
-  
-
-
-  &__socialmedia {
-    padding-top: 40px;
-  }
-
 }
 
 

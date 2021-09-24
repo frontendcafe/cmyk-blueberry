@@ -13,7 +13,7 @@ import "./styles.scss";
 const Footer = () => {
   return (
     <div className="footer">
-      <div classname="footer__logo">
+      <div className="footer__logo">
         <img
           src={Logo}
           title="Logo Wineberry"
@@ -21,50 +21,50 @@ const Footer = () => {
           className="footer__logo-img"
         />
       </div>
-      <div classname="footer__section">
-      <ul>
-        <li className="footer__section-item">
-          <Link to={{ pathname: "/", hash: "#BodegaWineberry" }}>
-            Bodega Wineberry
-          </Link>
-        </li>
-        <li className="footer__section-item">
-          {" "}
-          <Link to={{ pathname: "/", hash: "#nuestrosVinos" }}>
-            Nuestros Vinos
-          </Link>
-        </li>
-        <li className="footer__section-item">
-          <Link to={{ pathname: "/", hash: "#galeria" }}>Galeria</Link>{" "}
-        </li>
-        <li className="footer__section-item">
-          <Link to={{ pathname: "/", hash: "#contacto" }}>Contactanos</Link>
-        </li>
-        <li className="footer__section-item">
-          <Link to={{ pathname: "/", hash: "#sobre-nosotros" }}>
-            Sobre nosotros
-          </Link>
-        </li>
+      <div className="footer__section">
+        <ul>
+          <li className="footer__section-item">
+            <Link to={{ pathname: "/", hash: "#BodegaWineberry" }}>
+              Bodega Wineberry
+            </Link>
+          </li>
+          <li className="footer__section-item">
+            {" "}
+            <Link to={{ pathname: "/", hash: "#nuestrosVinos" }}>
+              Nuestros Vinos
+            </Link>
+          </li>
+          <li className="footer__section-item">
+            <Link to={{ pathname: "/", hash: "#galeria" }}>Galeria</Link>{" "}
+          </li>
+          <li className="footer__section-item">
+            <Link to={{ pathname: "/", hash: "#contacto" }}>Contactanos</Link>
+          </li>
+          <li className="footer__section-item">
+            <Link to={{ pathname: "/", hash: "#sobre-nosotros" }}>
+              Sobre nosotros
+            </Link>
+          </li>
         </ul>
       </div>
-      <div classname="footer__socialmedia">
-        <div classname="footer__socialmedia-item">
+      <div className="footer__socialmedia">
+        <div className="footer__socialmedia-title">
           Seguinos en nuestras redes
         </div>
-        <div classname="footer__socialmedia-icon">
+        <div className="footer__socialmedia-icon">
           <a href={"https://instagram.com/"}>
-            <FontAwesomeIcon color="white" icon={faInstagram} />
+            <FontAwesomeIcon color="white" icon={faInstagram} className="fa-lg" />
           </a>
           <a href={"https://twitter.com/"}>
-            <FontAwesomeIcon color="white" icon={faTwitter} />
+            <FontAwesomeIcon color="white" icon={faTwitter} className="fa-lg" />
           </a>
           <a href={"https://facebook.com/"}>
-            <FontAwesomeIcon color="white" icon={faFacebook} />
+            <FontAwesomeIcon color="white" icon={faFacebook} className="fa-lg" />
           </a>
         </div>
-        <div classname="footer__socialmedia-icon">
-          <FontAwesomeIcon color="white" icon={faWhatsapp} />
-          (+54 9) 11 26062011
+        <div className="footer__socialmedia-wsp">
+          <FontAwesomeIcon color="white" icon={faWhatsapp} className="fa-lg" />
+          <span>(+54 9) 11 26062011</span>
         </div>
       </div>
     </div>
