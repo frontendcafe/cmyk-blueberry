@@ -1,4 +1,4 @@
-@use 'src/styles/utils' as *;
+@use "src/styles/utils" as *;
 
 .card-container {
   background-color: $color-bg;
@@ -53,9 +53,6 @@
     }
   }
   &__button {
-    border-style: solid;
-    border-width: 1.5px;
-    border-color: $color-secondary;
     margin-left: 75%;
     margin-bottom: $size-sm;
   }
