@@ -5,15 +5,15 @@ import './styles.scss';
 const CardOurWinesMobile = ({title, img, background}) => {
 
     return (
-        <section className={`cardWine cardWine--${background}`}>
-            <div className="cardWine__container">
-                <img className="cardWine__container-img"src={img} alt="Imagen de vino"/>
-                <div className="cardWine__container-text">
+        <section className={`cardWineMobile cardWineMobile--${background}`}>
+            <div className="cardWineMobile__container">
+                <img className="cardWineMobile__container-img"src={img} alt="Imagen de vino"/>
+                <div className="cardWineMobile__container-text">
                     <h2>{title.substring (0, title.indexOf("-")-1)}</h2>
                     <h3>{title.substring(title.indexOf("-")+1, title.length)}</h3>
                 </div>   
             </div>                
-            <Button variant="secondary" text="Más información" clases="cardWine__button"></Button>
+            <Button variant="secondary" text="Más información" clases="cardWineMobile__button"></Button>
         </section>
     )
 }

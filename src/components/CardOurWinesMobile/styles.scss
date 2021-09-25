@@ -1,11 +1,11 @@
 @use 'src/styles/utils' as *;
 
-.cardWine {
+.cardWineMobile {
     display: flex;
     flex-direction: column;
     width: 185px;
     border-radius: $rounded;
-    margin: 20px;
+    margin: 30px;
 
     &--primary {
         background-color: $color-primary;

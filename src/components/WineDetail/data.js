@@ -12,7 +12,8 @@ export const wines = [
         "sabor": "Boca elegante en la que se vuelve imperceptible el paso por madera.",
         "maridaje": "Acompaña muy bien carnes rojas a la parrilla, quesos duros y pastas con salsas blancas así como de tomate o trufas. También es ideal para platos principales, como guisos y carnes de caza o verduras, como papas rellenas, cabutia al horno y pimientos.",
         "background" :"secondary",
-        "img" : wineMattwe
+        "img" : wineMattwe,
+        "infoCards": "Es una línea de vinos de alta gama elaborados en pequeñas cantidades, resultado de largos periodos de investigación y reconocimiento de los mejores terruños dentro de nuestras fincas. Cada ejemplar es el fiel reflejo de un viñedo especial ubicado en una microzona de la región de Cuyo seleccionada por sus características de calidad."
     
     }, 
     {
@@ -24,7 +25,8 @@ export const wines = [
         "sabor": "Entrada en boca dulce, taninos de textura fina, muy estructurado y persisteznte.",
         "maridaje": "Ideal para cenas especiales, donde el plato principal sea carne, que puede ser vacuna, de pato o cordero. También acompaña bien a un cerdo braseado o un chivo hecho a los fuegos.",
         "background" :"primary",
-        "img" : wineNisoma
+        "img": wineNisoma,
+        "infoCards": "Es el vino ícono de Bodega Wineberry. Busca complejidad y elegancia. Se elabora de uvas de bajos rendimientos, con largas maceraciones. Su crianza dura dos años en barricas nuevas de roble francés y un año de estiba en botella antes de salir al mercado."
     },
     {
         "title": "RED WINE - Since 2003",
@@ -35,6 +37,7 @@ export const wines = [
         "sabor": "Buena concentración y untuosidad, con taninos sedosos, típico del malbec argentino.",
         "maridaje": "Ideal para acompañar con carnes rojas asadas o pastas con salsas rojas.",
         "background" :"colorCard",
-        "img" : wineRedwine
+        "img" : wineRedwine,
+        "infoCards": "Creamos una línea de vinos únicos y elegantes, en donde cada uno es fruto del trabajo en un viñedo especial, por su edad y su manejo. Elaborado con uvas provenientes de nuestros viñedos centenarios plantados en 1906 y 1930."
     }
 ]
