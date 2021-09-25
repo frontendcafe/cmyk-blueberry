@@ -85,7 +85,7 @@ const WineDetail = ({
         <Button
           variant="transparent"
           onClick={goBack}
-          className="detail__section-button"
+          clases="detail__section-button"
         >
           Volver
         </Button>
