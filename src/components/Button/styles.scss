@@ -1,4 +1,4 @@
-@use 'src/styles/utils' as *;
+@use "src/styles/utils" as *;
 
 .button {
   font-family: $raleway;
@@ -93,6 +93,20 @@
 
     @include media(md) {
       padding: 10px 20px;
+    }
+  }
+
+  &--transparent {
+    background: $color-bg;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    background-color: transparent;
+    padding: 7px 14px;
+    border-radius: $rounded-mobile;
+
+    @include media(md) {
+      min-height: 60px;
+      padding: 5px 16px;
     }
   }
 }
