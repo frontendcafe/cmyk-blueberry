@@ -1,0 +1,85 @@
+@use "src/styles/utils" as *;
+
+.footer {
+  font-size: 12px;
+  background-color: $color-secondary;
+  color: $color-bg;
+  margin-top: 40px;
+  height: 132px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &__logo {
+    &-img{
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  &__section {
+    display: none;
+  }
+
+  &__socialmedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+
+    &-icon {
+      a:nth-child(2), a:nth-child(3) {
+        margin-left: 10px;
+      }
+    }
+
+    &-wsp {
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    
+  }
+
+  @include media(md) {
+    height: 419px;
+    font-size: $size-lg;
+
+    &__logo {
+      &-img {
+        height: 270px;
+        width: 270px;
+      }
+    }
+
+    &__section {
+      display: flex;
+      align-items: center;
+      height: 270px;
+      ul {
+        list-style: none;
+        li {
+          margin: 10px;
+        }
+      }
+    }
+
+    &__socialmedia {
+      &-icon {
+        margin-top: 10px;
+      }
+
+      &-wsp {
+        margin-top: 10px;
+        span {
+          font-size: $size-lg;
+        }
+      }
+    }
+  }
+}
+
+
