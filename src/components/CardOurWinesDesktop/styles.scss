@@ -1,0 +1,110 @@
+@use 'src/styles/utils' as *;
+
+.cardWine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 382px;
+    border-radius: 2px;
+    height: 700px;
+    margin-top: 100px;
+    margin-left: 80px;
+    position: relative;
+
+    &--primary {
+        background-color: $color-primary;
+    }
+
+    &--secondary {
+        background-color: $color-secondary;
+    }
+
+    &--colorCard {
+        background-color: $color-card;
+    }
+
+    &-img {
+        width: 146px;
+        position: absolute;
+        top: -20px;
+    }
+
+    &__container {
+        display: flex;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-30px);
+
+            h2, h3 {
+                font-size: $size-3xl;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0.05em;
+                color: $color-bg;
+            }
+        }
+
+        &-info {
+            display: none;
+        }
+
+        &-button {
+            display: none;
+        }
+    }
+
+    &:hover {
+        width: 650px;
+        flex-direction: row;
+        @include media(lg) {
+            width: 850px;
+        }
+        & .cardWine{
+            &-img{
+                width: 220px;
+                top: -80px;
+                left: -75px;
+            }
+            &__container{
+                flex-direction: column;
+                padding-left: 170px;
+
+                &-text {
+                    flex-direction: row;
+                    transform: translateY(0px);
+                    padding-bottom: 60px;
+                    justify-content: flex-start;
+
+                    h3 {
+                        padding-left: 6px;
+                    }
+                }
+        
+                &-info {
+                    display: inline;
+                    justify-content: center;
+                    align-items: center;
+                    color: $color-bg;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                    padding-right: 30px;
+
+                }
+        
+                &-button {
+                    display: inline;
+                    width: 167px;
+                    margin-top: 50px;
+                }
+
+            }
+        }
+    }
+}

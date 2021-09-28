@@ -1,6 +1,7 @@
 export const card ={
     title: "El nuevo vino de arandanos",
-    description: "Tal y como su nombre indica, el vino de arándanos se elabora a partir de los arándanos. La piel y la carne de la planta se fermentan por completo durante algún tiempo para obtener el vino de arándanos. No sólo es un vino sabroso, sino que tambien ofrece varios beneficios para la salud.",
+    description: "Tal y como su nombre indica, el vino de arándanos se elabora a partir de los arándanos. La piel y la carne de la planta se fermentan por completo durante algún tiempo para obtener el vino de arándanos. No sólo es un vino sabroso, sino que tambien ofrece varios",
+    descBold: "beneficios para la salud.",
     paragraphs: [
         {
             title: "Anti-envejecimiento",
@@ -13,11 +14,6 @@ export const card ={
         {
             title: "Sistema inmunológico",
             description: "Los arándanos utilizados para hacer este vino producen compuestos que protegen nuestro sistema inmunológico. Puede reducir el colesterol e incluso reducir las tasas inflamatorias en el cuerpo."
-        },
-        {
-            title: "consumirlo con moderación",
-        description: "Para conservarlo una vez abierto, lo mejor es volverlo a tapar con el corcho y asegurarse de que no queda expuesto al aire."
         }
     ]
 };
-
