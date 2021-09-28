@@ -30,9 +30,7 @@
 .image__content {
   position: absolute;
   top: -5rem;
-  left: 40%;
-  height: 200px;
-  width: 200px;
+  left: 20%;
 
   @include media(md) {
     left: 15%;
@@ -59,7 +57,7 @@
     margin-bottom: 0.5rem;
 
     @include media(md) {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -78,7 +76,7 @@
     font-size: $size-md;
     
     @include media (md) {
-        font-size: $size-lg;        
+        font-size: $size-lg;  
     }
   }
 }

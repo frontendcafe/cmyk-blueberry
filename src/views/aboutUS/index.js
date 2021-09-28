@@ -41,7 +41,6 @@ const AboutUS = () => {
               name={card.name}
               role={card.role}
               links={card.links}
-              mail={card.mail}
               img={card.img}
             />
           );

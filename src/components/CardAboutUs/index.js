@@ -13,7 +13,6 @@ function CardAboutUs({ name, role, mail, links, img }) {
           <h1 className="title__text"> {name} </h1>
           <h2 className="title__text title__text-role"> {role} </h2>
         </div>
-        <p className="box__mail"> {mail} </p>
         <div className="card-container__box--icons">
           {links.map((link) => {
             return (

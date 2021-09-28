@@ -2,6 +2,9 @@ import image1 from "../../assets/sobre-nosotros1.jpg";
 import haditaImg from "../../assets/haditaImg.PNG";
 import micaImg from "../../assets/micaImg.jpg";
 import giseImg from "../../assets/giseImg.jpg";
+import ericImg from "../../assets/ericImg.png";
+import nachoImg from "../../assets/nachoImg.jpg";
+import leoImg from "../../assets/leoImg.jpg";
 import linkedinVector from "../../assets/linkedinVector.svg";
 import githubVector from "../../assets/githubVector.svg";
 import behanceVector from "../../assets/behanceVector.svg";
@@ -11,7 +14,6 @@ export const cards = [
   {
     name: "María Sofia Terragno",
     role: "Diseñadora UX",
-    mail: "sofiaterragno@gmail.com",
     links: [
       {
         link: "www.linkedin.con",
@@ -22,7 +24,7 @@ export const cards = [
     img: image1,
   },
   {
-    name: "Ana",
+    name: "Anahi Gaetan",
     role: "Coordinadora",
     mail: "",
     links: [
@@ -35,9 +37,8 @@ export const cards = [
     img: haditaImg,
   },
   {
-    name: "Micaela",
+    name: "Micaela Orellano",
     role: "Desarrolladora",
-    mail: "",
     links: [
       {
         link: "https://www.linkedin.com/in/micaela-orellano-983a35199/",
@@ -48,9 +49,8 @@ export const cards = [
     img: micaImg,
   },
   {
-    name: "Giselle",
+    name: "Giselle Chaumont Mohr",
     role: "Desarrolladora",
-    mail: "",
     links: [
       {
         link: "https://www.linkedin.com/in/gisellechaumontmohr/",
@@ -61,9 +61,8 @@ export const cards = [
     img: giseImg,
   },
   {
-    name: "Celeste",
+    name: "Celeste Cabrera",
     role: "Desarrolladora",
-    mail: "",
     links: [
       {
         link: "https://www.linkedin.com/in/celeste-cabrera/",
@@ -72,5 +71,41 @@ export const cards = [
       { link: "https://github.com/celcab27", icon: githubVector },
     ],
     img: celImg,
+  },
+  {
+    name: "Eric Vargas",
+    role: "Desarrollador",
+    links: [
+      {
+        link: "https://www.linkedin.com/in/erianvc/",
+        icon: linkedinVector,
+      },
+      { link: "https://www.github.com/erianvc", icon: githubVector },
+    ],
+    img: ericImg,
+  },
+  {
+    name: " Leonardo Coronel",
+    role: "Desarrollador",
+    links: [
+      {
+        link: "https://www.linkedin.com/in/leonardo-m-coronel/",
+        icon: linkedinVector,
+      },
+      { link: "https://github.com/LeoCoronel", icon: githubVector },
+    ],
+    img: leoImg,
+  },
+  {
+    name: "Ignacio Cernich",
+    role: "Desarrollador",
+    links: [
+      {
+        link: "https://www.linkedin.com/in/ignacio-cernich-9ab870212/",
+        icon: linkedinVector,
+      },
+      { link: "https://github.com/IgnacioCernich", icon: githubVector },
+    ],
+    img: nachoImg,
   },
 ];
