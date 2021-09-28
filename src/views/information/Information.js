@@ -8,7 +8,7 @@ import "./styles.scss";
 
 export const Information = () => {
 
-  const size = useWindow();console.log(size);
+  const size = useWindow();
   const history = useHistory();
 
   const handleClick = () => {
