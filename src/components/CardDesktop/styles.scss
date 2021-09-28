@@ -60,6 +60,15 @@
     mix-blend-mode: multiply;
   }
 
+  @include media(md) {
+    &.secondary {
+      margin-bottom: -250px;
+    }
+    &.primary {
+      margin-bottom: 50px;
+    }
+  }
+
 }
 
 .card-desktop--expanded {
