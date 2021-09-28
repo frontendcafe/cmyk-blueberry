@@ -6,15 +6,19 @@ import { cards } from "./data";
 import { useWindow } from "../../hooks/useWindow";
 
 const AboutUS = () => {
-
   const window = useWindow().width;
 
-  console.log(cards);
   return (
     <div className="mainDiv">
-      {window > 768 ?<div className="mainDiv__img">
-        <img src={logo}></img>
-      </div> : <div className="mainDiv__title"><h2 className="title__content">Sobre nosotros</h2></div>}
+      {window > 768 ? (
+        <div className="mainDiv__img">
+          <img src={logo}></img>
+        </div>
+      ) : (
+        <div className="mainDiv__title">
+          <h2 className="title__content">Sobre nosotros</h2>
+        </div>
+      )}
       <div className="mainDiv__text">
         <p className="text__content">
           "Wineberry surgió a traves del proyecto CMYK creada por Frontend Café

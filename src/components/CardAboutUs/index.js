@@ -1,9 +1,8 @@
 import React from "react";
 import "./styles.scss";
-import linkedinVector from "../../assets/linkedinVector.svg";
-import githubVector from "../../assets/githubVector.svg";
 
 function CardAboutUs({ name, role, mail, links, img }) {
+  console.log(links);
   return (
     <div className="card-container">
       <div className="card-container__image">
@@ -16,12 +15,13 @@ function CardAboutUs({ name, role, mail, links, img }) {
         </div>
         <p className="box__mail"> {mail} </p>
         <div className="card-container__box--icons">
-          <a href={links.linkedin} className="icons__vector">
-            <img src={linkedinVector} />
-          </a>
-          <a href={links.github} className="icons__vecotor">
-            <img src={githubVector} />
-          </a>
+          {links.map((link) => {
+            return (
+              <a href={link.link} className="icons__vector">
+                <img src={link.icon} />
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>

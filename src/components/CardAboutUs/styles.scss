@@ -1,6 +1,7 @@
 @use "src/styles/utils" as *;
 
 .card-container {
+
   display: flex;
   flex-direction: column;
   border-color: $color-secondary;
@@ -29,7 +30,9 @@
 .image__content {
   position: absolute;
   top: -5rem;
-  left: 23%;
+  left: 40%;
+  height: 200px;
+  width: 200px;
 
   @include media(md) {
     left: 15%;

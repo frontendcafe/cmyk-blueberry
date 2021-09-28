@@ -35,13 +35,15 @@
 
 .mainDiv__cards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     margin-top: 4rem;
-    justify-content: space-around;
+    grid-row-gap: 10rem;
+    justify-items: center;
     align-items: center;
     
     @include media(md) {
+        grid-template-columns: 1fr 1fr;
         flex-direction: row;
         justify-content: space-around;
 
