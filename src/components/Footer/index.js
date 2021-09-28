@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="footer__section">
         <ul>
           <li className="footer__section-item">
-            <Link to={{ pathname: "/", hash: "#BodegaWineberry" }}>
+            <Link to={{ pathname: "/bodega-wineberry", hash: "#BodegaWineberry" }}>
               Bodega Wineberry
             </Link>
           </li>
@@ -41,7 +41,7 @@ const Footer = () => {
             <Link to={{ pathname: "/", hash: "#contacto" }}>Contactanos</Link>
           </li>
           <li className="footer__section-item">
-            <Link to={{ pathname: "/", hash: "#sobre-nosotros" }}>
+            <Link to={{ pathname: "/sobre-nosotros", hash: "#sobre-nosotros" }}>
               Sobre nosotros
             </Link>
           </li>
