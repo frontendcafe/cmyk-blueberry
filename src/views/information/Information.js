@@ -2,16 +2,21 @@ import Button from "../../components/Button";
 import CardMobile from "../../components/CardsMobile";
 import CardDesktop from "../../components/CardDesktop";
 import data from "./data.json";
+import { useHistory } from "react-router";
 import { useWindow } from "../../hooks/useWindow";
 import "./styles.scss";
 
-export const Information = ({handleClick, moreInfo}) => {
+export const Information = () => {
 
-  const size = useWindow();
-  console.log(size);
+  const size = useWindow();console.log(size);
+  const history = useHistory();
+
+  const handleClick = () => {
+      history.push("/bodega-wineberry");
+  };
   
   return (
-    <section className={`information${moreInfo ? "--expanded" : ""}`}>
+    <section className={`information`}>
       <div className="information__cards">
         {size.width < 576
           ? data.map((info) => (
@@ -29,14 +34,13 @@ export const Information = ({handleClick, moreInfo}) => {
                 icon={info.logo}
                 cover={info.deskImg}
                 title={info.title}
-                children={moreInfo ? info.description : info.shortDesc}
+                children={info.shortDesc}
                 type ={info.type}
-                moreInfo={moreInfo}
               />
             ))}
       </div>
       <div className="information__btn">
-        <Button variant="blueborder" text="Más información" onClick={handleClick} />
+        <Button variant="blueborder" text="Más información" onClick={ handleClick } />
       </div>
     </section>
   );

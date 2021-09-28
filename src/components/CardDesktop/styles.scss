@@ -81,4 +81,8 @@
       width: 40%;
     }
   }
+
+  @include media(xl) {
+    transform: translateY(-150px);
+  }
 }
