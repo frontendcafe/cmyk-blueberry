@@ -9,7 +9,7 @@ const AboutUS = () => {
   const window = useWindow().width;
 
   return (
-    <div className="mainDiv">
+    <div id="sobre-nosotros" className="mainDiv">
       {window > 768 ? (
         <div className="mainDiv__img">
           <img src={logo}></img>
@@ -42,6 +42,7 @@ const AboutUS = () => {
               role={card.role}
               links={card.links}
               img={card.img}
+              key= {card.name}
             />
           );
         })}

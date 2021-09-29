@@ -1,8 +1,7 @@
 import React from "react";
 import "./styles.scss";
 
-function CardAboutUs({ name, role, mail, links, img }) {
-  console.log(links);
+function CardAboutUs({ name, role, links, img }) {
   return (
     <div className="card-container">
       <div className="card-container__image">
@@ -16,8 +15,8 @@ function CardAboutUs({ name, role, mail, links, img }) {
         <div className="card-container__box--icons">
           {links.map((link) => {
             return (
-              <a href={link.link} className="icons__vector">
-                <img src={link.icon} />
+              <a href={link.link} key={link.link} className="icons__vector">
+                <img src={link.icon} alt="Icon"/>
               </a>
             );
           })}
