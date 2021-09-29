@@ -1,6 +1,6 @@
 @use "src/styles/utils" as *;
 
-.card-container {
+.cardAbout-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +22,9 @@
       width: 76%;
       position: relative;
       top: -5rem;
+      display: block;
+      margin: auto;
+
     
       @include media(md) {
         width: 100%;
