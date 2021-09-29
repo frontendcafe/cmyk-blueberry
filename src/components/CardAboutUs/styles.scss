@@ -23,7 +23,8 @@
       position: relative;
       top: -5rem;
       display: block;
-      margin: 0;
+      margin: auto;
+
     
       @include media(md) {
         width: 100%;
