@@ -77,7 +77,7 @@ const Navbar = () => {
             <Link
               to={{
                 pathname: '/',
-                hash:"#galeria"
+                hash: '#galeria',
               }}
             >
               Galeria
