@@ -6,6 +6,7 @@ import Sucursales from "./views/sucursales/index.js"
 import Gallery from './components/Gallery/index';
 import AboutUS from './views/aboutUS';
 import News from './views/news';
+import ScrollToTop from "./hooks/ScrollToTop";
 import { useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -24,25 +25,25 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar />
       <Switch>
         <Route path="/home" exact>
           <Main />
           <Information handleClick={handleClick} moreInfo={moreInfo} />
           {moreInfo ? <Sucursales /> : null }
-          <Gallery></Gallery>
+          <Gallery />
         </Route>
         <Route path="/sobre-nosotros" exact>
-          <AboutUS></AboutUS>
+          <AboutUS />
         </Route>
         <Route path="/lo-nuevo" exact>
-          <News></News>
+          <News />
         </Route>
         <Route path="/" exact>
           <Main />
           <Information handleClick={handleClick} moreInfo={moreInfo} />
           {moreInfo ? <Sucursales /> : null }
-          <Gallery></Gallery>
+          <Gallery />
         </Route>
       </Switch>
       <Footer />
@@ -53,6 +54,7 @@ function App() {
 function AppWithProviders() {
   return (
     <Router>
+      <ScrollToTop />
       <App />
     </Router>
   );
