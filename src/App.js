@@ -6,38 +6,42 @@ import Gallery from './components/Gallery/index';
 import AboutUS from './views/aboutUS';
 import News from './views/news';
 import BodegaWineberry from "./views/bodegaWineberry/index";
+import ScrollToTop from "./hooks/ScrollToTop";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect
 } from 'react-router-dom';
 
 
 function App() {
 
+
+
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar />
       <Switch>
-        <Route path="/home" exact>
-          <Main />
-          <Information />
-          <Gallery></Gallery>
-        </Route>
-        <Route path="/sobre-nosotros" exact>
-          <AboutUS></AboutUS>
-        </Route>
-        <Route path="/lo-nuevo" exact>
-          <News></News>
-        </Route>
-        <Route path="/bodega-wineberry" exact>
-          <BodegaWineberry></BodegaWineberry>
-        </Route>
-        <Route path="/" exact>
-          <Main />
-          <Information />
-          <Gallery></Gallery>
-        </Route>
+          <Route path="/home" exact>
+            <Main />
+            <Information />
+            <Gallery />
+          </Route>
+          <Route path="/sobre-nosotros" exact>
+            <AboutUS />
+          </Route>
+          <Route path="/lo-nuevo" exact>
+            <News />
+          </Route>
+          <Route path="/bodega-wineberry" exact>
+            <BodegaWineberry />
+          </Route>
+          <Route path="/" exact>
+            <Main />
+            <Information />
+            <Gallery />
+          </Route>
       </Switch>
       <Footer />
     </div>
@@ -47,7 +51,8 @@ function App() {
 function AppWithProviders() {
   return (
     <Router>
-      <App />
+      <ScrollToTop />
+        <App />
     </Router>
   );
 }

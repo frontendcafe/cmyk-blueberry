@@ -55,8 +55,7 @@ const Navbar = () => {
             />
             <Link
               to={{
-                pathname: '/bodega-wineberry',
-                hash: '#nuestrasBodegas',
+                pathname: '/bodega-wineberry'
               }}
             >
               Bodega Wineberry
@@ -66,7 +65,7 @@ const Navbar = () => {
             <img className="hidden" alt="Icon nuestros vinos" src={vinosIcon} />
             <Link
               to={{
-                pathname: '/',
+                pathname: '/home',
                 hash: '#nuestrosVinos',
               }}
             >
