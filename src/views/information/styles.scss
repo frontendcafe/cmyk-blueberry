@@ -21,6 +21,10 @@
     .primary {
       margin-top: 300px;
     }
+
+    &__cards {
+      padding-bottom: 0;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -65,6 +69,7 @@
   @include media(xl){
     .information__cards {
       margin-top: 450px;
+      margin-bottom: -100px;
     }
   }
 }

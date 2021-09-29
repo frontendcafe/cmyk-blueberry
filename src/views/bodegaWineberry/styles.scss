@@ -1,0 +1,23 @@
+
+@use 'src/styles/utils' as *;
+
+.bodega {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &__btn {
+        margin-right: 100px;
+        max-width: 1200px;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    @include media(lg) {
+        &__btn {
+            margin-right: 0;
+        }
+    }
+}
