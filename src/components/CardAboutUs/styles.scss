@@ -1,0 +1,81 @@
+@use "src/styles/utils" as *;
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid $color-secondary;
+  width: 239px;
+  height: 225px;
+  background-color: $color-bg;
+
+  @include media(md) {
+    width: 408px;
+    height: 384px;
+  }
+
+  &__image {
+    max-width: 296px;
+
+    img {
+      width: 76%;
+      position: relative;
+      top: -5rem;
+    
+      @include media(md) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50px);
+  
+    @include media(md) {
+    }
+
+    .box__title {
+
+      &-text {
+        font-size: $size-md;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        color: $color-primary;
+        @include media (md) {
+          font-size: $size-3xl;
+          line-height: 42px;
+        }
+
+        &--role{
+          font-size: $size-sm;
+          line-height: 21px;
+          
+          @include media (md) {
+              font-size: $size-lg;
+              line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  
+  &__icons {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+  
+    .icons__vector {
+      width: 48px;
+      img {
+        max-width: 50%;
+        @include media (md) {
+          max-width: 80%;  
+        }
+      }
+    }
+  }
+}
