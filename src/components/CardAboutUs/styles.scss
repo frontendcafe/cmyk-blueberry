@@ -1,113 +1,81 @@
 @use "src/styles/utils" as *;
 
 .card-container {
-
   display: flex;
   flex-direction: column;
-  border-color: $color-secondary;
-  border-width: 3px;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid $color-secondary;
   width: 239px;
   height: 225px;
-  background-color: $color-bg !important;
-  margin-top: 8rem;
+  background-color: $color-bg;
 
   @include media(md) {
-    margin-top: 3rem;
     width: 408px;
     height: 384px;
   }
-}
 
-.card-container__image {
-  position: relative;
-  width: 70%;
+  &__image {
+    max-width: 296px;
 
-  @include media(md) {
-    width: 100%;
+    img {
+      width: 76%;
+      position: relative;
+      top: -5rem;
+    
+      @include media(md) {
+        width: 100%;
+      }
+    }
   }
-}
 
-.image__content {
-  position: absolute;
-  top: -5rem;
-  left: 20%;
-
-  @include media(md) {
-    left: 15%;
-  }
-}
-.card-container__box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  width: 100%;
-  padding-left: 7%;
-  padding-bottom: 0.5rem;
-  text-align: left;
-
-  @include media(md) {
-    padding-bottom: 1rem;
-    padding-left: 15%;
-  }
-}
-
-.box__title {
-    align-self: flex-start;
-    margin-bottom: 0.5rem;
-
+  &__box {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50px);
+  
     @include media(md) {
-        margin-bottom: 0.5rem;
     }
-}
 
-.title__text {
-  color: $color-primary;
-  font-family: $raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: $size-3xl;
-  line-height: 150%;
-  text-align: left;
-  /* or 42px */
-  letter-spacing: 0.05em;
+    .box__title {
 
-  &-role{
-    font-size: $size-md;
-    
-    @include media (md) {
-        font-size: $size-lg;  
+      &-text {
+        font-size: $size-md;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        color: $color-primary;
+        @include media (md) {
+          font-size: $size-3xl;
+          line-height: 42px;
+        }
+
+        &--role{
+          font-size: $size-sm;
+          line-height: 21px;
+          
+          @include media (md) {
+              font-size: $size-lg;
+              line-height: 30px;
+          }
+        }
+      }
     }
   }
-}
-
-.box__mail {
-    font-family: $raleway;
-    margin-bottom: 1rem;
-
-    font-size: $size-md;
-    
-    @include media (md) {
-        font-size: $size-lg; 
-        margin-bottom: 2rem;
+  
+  &__icons {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+  
+    .icons__vector {
+      width: 48px;
+      img {
+        max-width: 50%;
+        @include media (md) {
+          max-width: 80%;  
+        }
+      }
     }
-}
-
-.card-container__box--icons {
-  display: flex;
-  margin-top: 1rem;
-  width: 50%;
-  justify-content: space-around;
-
-  @include media(md) {
-    width: 30%;
-  }
-}
-
-.icons__vecotor {
-  height: 2rem;
-
-  img {
-    height: 100%;
   }
 }
