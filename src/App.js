@@ -6,6 +6,7 @@ import Gallery from './components/Gallery/index';
 import AboutUS from './views/aboutUS';
 import News from './views/news';
 import BodegaWineberry from "./views/bodegaWineberry/index";
+import ScrollToTop from "./hooks/ScrollToTop";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,26 +18,26 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar />
       <Switch>
         <Route path="/home" exact>
           <Main />
           <Information />
-          <Gallery></Gallery>
+          <Gallery />
         </Route>
         <Route path="/sobre-nosotros" exact>
-          <AboutUS></AboutUS>
+          <AboutUS />
         </Route>
         <Route path="/lo-nuevo" exact>
-          <News></News>
+          <News />
         </Route>
         <Route path="/bodega-wineberry" exact>
-          <BodegaWineberry></BodegaWineberry>
+          <BodegaWineberry />
         </Route>
         <Route path="/" exact>
           <Main />
           <Information />
-          <Gallery></Gallery>
+          <Gallery />
         </Route>
       </Switch>
       <Footer />
@@ -47,6 +48,7 @@ function App() {
 function AppWithProviders() {
   return (
     <Router>
+      <ScrollToTop />
       <App />
     </Router>
   );

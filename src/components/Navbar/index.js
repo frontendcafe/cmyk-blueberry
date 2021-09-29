@@ -55,8 +55,7 @@ const Navbar = () => {
             />
             <Link
               to={{
-                pathname: '/bodega-wineberry',
-                hash: '#nuestrasBodegas',
+                pathname: '/bodega-wineberry'
               }}
             >
               Bodega Wineberry
