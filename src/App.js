@@ -11,37 +11,34 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
 } from 'react-router-dom';
 
 
 function App() {
 
-
-
   return (
     <div className="App">
       <Navbar />
       <Switch>
-          <Route path="/home" exact>
-            <Main />
-            <Information />
-            <Gallery />
-          </Route>
-          <Route path="/sobre-nosotros" exact>
-            <AboutUS />
-          </Route>
-          <Route path="/lo-nuevo" exact>
-            <News />
-          </Route>
-          <Route path="/bodega-wineberry" exact>
-            <BodegaWineberry />
-          </Route>
-          <Route path="/" exact>
-            <Main />
-            <Information />
-            <Gallery />
-          </Route>
+        <Route path="/home" exact>
+          <Main />
+          <Information />
+          <Gallery />
+        </Route>
+        <Route path="/sobre-nosotros" exact>
+          <AboutUS />
+        </Route>
+        <Route path="/lo-nuevo" exact>
+          <News />
+        </Route>
+        <Route path="/bodega-wineberry" exact>
+          <BodegaWineberry />
+        </Route>
+        <Route path="/" exact>
+          <Main />
+          <Information />
+          <Gallery />
+        </Route>
       </Switch>
       <Footer />
     </div>
@@ -52,7 +49,7 @@ function AppWithProviders() {
   return (
     <Router>
       <ScrollToTop />
-        <App />
+      <App />
     </Router>
   );
 }

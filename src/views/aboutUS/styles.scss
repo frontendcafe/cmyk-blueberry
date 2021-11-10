@@ -1,0 +1,75 @@
+@use 'src/styles/utils' as *;
+
+//Ya hay una clase main
+.mainDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75px;
+    @include media(md) {
+        padding-top: 100px;
+    }
+
+    &__img{
+        width: 20%;
+        height: 20%;
+        align-self: center;
+    }
+
+    &-title { 
+        margin-bottom: 2rem;
+        font-size: $size-xl;
+        color: $color-primary;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+
+    }
+
+    &__text {
+        width: 60%;
+        text-align: center;
+
+        &-content {
+            font-size: $size-base;
+            color: black;
+            font-weight: 400;
+            line-height:  $size-2xl;
+            letter-spacing: 0.05em;
+            @include media(md) {
+                font-size: $size-3xl;
+                line-height: 42px;
+            }
+        }
+
+        h2 {
+            margin: 25px 0px;
+            font-size: $size-xl;
+            font-weight: 700;
+            line-height: 33px;
+            letter-spacing: 0.05em;
+            color: $color-text;
+            @include media(md) {
+                font-size: $size-3xl;
+                line-height: 42px;
+            }
+        }
+    }
+
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 6rem;
+        grid-row-gap: 10rem;
+        justify-items: center;
+        align-items: center;
+        
+        @media (min-width: 870px) {
+            grid-template-columns: 1fr 1fr;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}

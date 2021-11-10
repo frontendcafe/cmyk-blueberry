@@ -41,7 +41,7 @@ const Footer = () => {
             <Link to={{ pathname: "/", hash: "#contacto" }}>Contactanos</Link>
           </li>
           <li className="footer__section-item">
-            <Link to={{ pathname: "/sobre-nosotros", hash: "#sobre-nosotros" }}>
+            <Link to={{ pathname: "/sobre-nosotros", hash: "" }}>
               Sobre nosotros
             </Link>
           </li>
