@@ -7,6 +7,7 @@ import colorIconD from "../../assets/color-iconD.svg";
 import aromaIconD from "../../assets/aroma-iconD.svg";
 import saborIconD from "../../assets/sabor-iconD.svg";
 import prensa from "../../assets/prensa.png";
+import Button from '../Button/index';
 
 const WineDetail = ({
   title,

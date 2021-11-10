@@ -30,7 +30,7 @@ function Main() {
             la nuestra tampoco... <br />
           </span>
         </h1>
-        <Button variant="primary" text="Conocé lo nuevo" onClick={handleClick} ></Button>
+        <Button variant="primary" text="Conocé lo nuevo" onClick={handleClick} />
       </div>
       <div className="main__img">
         <img

@@ -106,7 +106,7 @@ const Navbar = () => {
           variant="primary"
           text="Contactanos"
           clases="navbar__contact-btn"
-        ></Button>
+        />
       </Link>
 
       <div className="navbar__search">
