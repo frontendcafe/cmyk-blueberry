@@ -1,0 +1,46 @@
+@use "src/styles/utils" as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+.contact-form {
+  width: 100vw;
+  height: 1280px;
+  background-color: $color-primary;
+  text-align: center;
+  color: $color-bg;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 150%;
+  &__title {
+    padding-top: 24px;
+  }
+  &__description {
+    padding-top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  &__info {
+    margin-top: 100px;
+  }
+  #mensaje {
+    width: 243px;
+    height: 379px;
+  }
+  #boton {
+    color: $color-secondary;
+  }
+  #revendedor,
+  #consumidor {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    padding-left: 9px;
+  }
+  #revendedor {
+    padding-right: 29px;
+  }
+  input text {
+    font-size: 16px;
+    width: 67.5vw;
+  }
+}
