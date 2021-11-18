@@ -13,7 +13,7 @@ const CardOurWinesMobile = ({title, img, background}) => {
                     <h3>{title.substring(title.indexOf("-")+1, title.length)}</h3>
                 </div>   
             </div>                
-            <Button variant="secondary" text="Más información" clases="cardWineMobile__button"></Button>
+            <Button variant="secondary" text="Más información" clases="cardWineMobile__button" />
         </section>
     )
 }

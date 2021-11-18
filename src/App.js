@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route path="/home" exact>
+        <Route path={["/", "/home"]} exact>
           <Main />
           <Information />
           <Gallery />
@@ -33,11 +33,6 @@ function App() {
         </Route>
         <Route path="/bodega-wineberry" exact>
           <BodegaWineberry />
-        </Route>
-        <Route path="/" exact>
-          <Main />
-          <Information />
-          <Gallery />
         </Route>
       </Switch>
       <Footer />

@@ -65,7 +65,7 @@ const Navbar = () => {
             <img className="hidden" alt="Icon nuestros vinos" src={vinosIcon} />
             <Link
               to={{
-                pathname: '/',
+                pathname: '/home',
                 hash: '#nuestrosVinos',
               }}
             >
@@ -106,7 +106,7 @@ const Navbar = () => {
           variant="primary"
           text="Contactanos"
           clases="navbar__contact-btn"
-        ></Button>
+        />
       </Link>
 
       <div className="navbar__search">

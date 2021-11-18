@@ -36,7 +36,7 @@ function CardMainMobile() {
         text="Volver"
         clases="card-container__button"
         onClick={handleClick}
-      ></Button>
+      />
     </div>
   );
 }

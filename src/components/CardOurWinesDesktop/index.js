@@ -13,7 +13,7 @@ const CardOurWinesDesktop = ({title, img, background, info}) => {
                     <h3>{title.substring(title.indexOf("-")+1, title.length)}</h3>
                 </div>
                 <p className="cardWine__container-info">{info}</p>
-                <Button variant="secondary" text="Quiero saber más" clases="cardWine__container-button"></Button>
+                <Button variant="secondary" text="Quiero saber más" clases="cardWine__container-button" />
             </div>   
         </section>
     )

@@ -63,7 +63,7 @@ const CardMainDesktop = () => {
           text="Volver"
           clases="card-container__button"
           onClick={handleClick}
-        ></Button>
+        />
       </div>
     </div>
   );

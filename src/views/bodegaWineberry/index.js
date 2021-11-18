@@ -45,7 +45,7 @@ return (
         </section>
         <Sucursales />
         <div className="bodega__btn">
-            <Button variant="transparent" text="Volver" className="card-container__button" onClick={handleClick}></Button>
+            <Button variant="transparent" text="Volver" className="card-container__button" onClick={handleClick} />
         </div>
     </div>
     );
