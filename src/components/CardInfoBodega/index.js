@@ -10,7 +10,7 @@ const CardInfoBodega = () => {
             <p className="card__email">info@wineberry.com.ar</p>
             <div className="card__wsp">
                 <img src={Wsp} alt="whatsapp icon" />
-                <p>(+54 9)1158496231</p>
+                <p>(+54 9)<span className="card__wsp__code">11</span>58496231</p>
             </div>
         </div>
     )
